@@ -11,6 +11,11 @@
     console: "admin-console.html"
   };
 
+  var DEFAULT_ADMIN = {
+    username: "admin",
+    password: "password"
+  };
+
   var isLoggedIn = function () {
     return window.sessionStorage.getItem(STORAGE_KEYS.session) === "active";
   };
@@ -22,13 +27,6 @@
     }
 
     window.sessionStorage.removeItem(STORAGE_KEYS.session);
-  };
-
-  var hasStoredCredentials = function () {
-    return Boolean(
-      window.localStorage.getItem(STORAGE_KEYS.username) &&
-        window.localStorage.getItem(STORAGE_KEYS.passwordHash)
-    );
   };
 
   var createFallbackHash = function (value) {
@@ -58,6 +56,19 @@
   var saveCredentials = function (username, passwordHash) {
     window.localStorage.setItem(STORAGE_KEYS.username, username);
     window.localStorage.setItem(STORAGE_KEYS.passwordHash, passwordHash);
+  };
+
+  var ensureDefaultCredentials = function () {
+    var storedUsername = window.localStorage.getItem(STORAGE_KEYS.username);
+    var storedHash = window.localStorage.getItem(STORAGE_KEYS.passwordHash);
+
+    if (storedUsername && storedHash) {
+      return Promise.resolve();
+    }
+
+    return hashPassword(DEFAULT_ADMIN.password).then(function (passwordHash) {
+      saveCredentials(DEFAULT_ADMIN.username, passwordHash);
+    });
   };
 
   var getStoredBookings = function () {
@@ -141,20 +152,10 @@
 
     var modeCopy = document.getElementById("auth-mode-copy");
     var submitButton = document.getElementById("auth-submit-button");
-    var confirmWrap = document.getElementById("confirm-password-wrap");
     var feedback = document.getElementById("auth-feedback");
 
-    var mode = hasStoredCredentials() ? "login" : "setup";
-
-    if (mode === "setup") {
-      modeCopy.textContent = "First-time setup: create your admin login details.";
-      submitButton.textContent = "Create admin login";
-      confirmWrap.hidden = false;
-    } else {
-      modeCopy.textContent = "Enter your admin details to continue.";
-      submitButton.textContent = "Sign in";
-      confirmWrap.hidden = true;
-    }
+    modeCopy.textContent = "Enter your admin details to continue.";
+    submitButton.textContent = "Sign in";
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -162,11 +163,8 @@
 
       var usernameField = document.getElementById("admin-username");
       var passwordField = document.getElementById("admin-password");
-      var confirmField = document.getElementById("admin-password-confirm");
-
       var username = usernameField.value.trim();
       var password = passwordField.value;
-      var confirmPassword = confirmField ? confirmField.value : "";
 
       if (!username || !password) {
         setFeedback(feedback, "Please enter both username and password.", "error");
@@ -178,20 +176,8 @@
         return;
       }
 
-      if (mode === "setup" && password !== confirmPassword) {
-        setFeedback(feedback, "Passwords do not match.", "error");
-        return;
-      }
-
       hashPassword(password)
         .then(function (passwordHash) {
-          if (mode === "setup") {
-            saveCredentials(username, passwordHash);
-            setLoggedIn(true);
-            window.location.replace(PATHS.console);
-            return;
-          }
-
           var storedUsername = window.localStorage.getItem(STORAGE_KEYS.username);
           var storedHash = window.localStorage.getItem(STORAGE_KEYS.passwordHash);
 
@@ -411,14 +397,16 @@
   };
 
   document.addEventListener("DOMContentLoaded", function () {
-    var page = document.body ? document.body.getAttribute("data-admin-page") : "";
+    ensureDefaultCredentials().then(function () {
+      var page = document.body ? document.body.getAttribute("data-admin-page") : "";
 
-    if (page === "login") {
-      initLoginPage();
-    }
+      if (page === "login") {
+        initLoginPage();
+      }
 
-    if (page === "console") {
-      initConsolePage();
-    }
+      if (page === "console") {
+        initConsolePage();
+      }
+    });
   });
 })();
