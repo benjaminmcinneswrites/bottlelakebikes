@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Console | Bottle Lake Bikes</title>
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta
+    name="description"
+    content="Private admin console for Bottle Lake Bikes."
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-admin-page="console">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-logo" href="index.html">Bottle Lake Bikes</a>
+      <div class="button-row">
+        <button id="admin-logout" class="btn btn-secondary" type="button">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Admin Console</p>
+        <h1>Manage your site starter</h1>
+        <p class="lead">
+          Signed in as <strong id="admin-username-label">Admin</strong>. This console is not linked from the main site.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card-grid two-up admin-grid-top">
+          <article class="card">
+            <h2>Quick edit links</h2>
+            <p class="form-note">Open any page, edit your content, then commit changes to GitHub.</p>
+            <ul class="admin-link-list">
+              <li><a class="text-link" href="index.html" target="_blank" rel="noopener">Edit home page</a></li>
+              <li><a class="text-link" href="about.html" target="_blank" rel="noopener">Edit about page</a></li>
+              <li><a class="text-link" href="services.html" target="_blank" rel="noopener">Edit services page</a></li>
+              <li><a class="text-link" href="buying-selling.html" target="_blank" rel="noopener">Edit buying &amp; selling page</a></li>
+              <li><a class="text-link" href="booking.html" target="_blank" rel="noopener">Edit booking page</a></li>
+              <li><a class="text-link" href="contact.html" target="_blank" rel="noopener">Edit contact page</a></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>Update login details</h2>
+            <form id="admin-credentials-form" novalidate>
+              <div class="form-field">
+                <label for="new-admin-username">New username</label>
+                <input type="text" id="new-admin-username" name="new-admin-username" required>
+              </div>
+
+              <div class="form-field">
+                <label for="new-admin-password">New password</label>
+                <input type="password" id="new-admin-password" name="new-admin-password" required>
+              </div>
+
+              <div class="form-field">
+                <label for="new-admin-password-confirm">Confirm new password</label>
+                <input
+                  type="password"
+                  id="new-admin-password-confirm"
+                  name="new-admin-password-confirm"
+                  required
+                >
+              </div>
+
+              <p id="credentials-feedback" class="admin-alert" hidden></p>
+
+              <button class="btn btn-primary btn-full" type="submit">Save login details</button>
+            </form>
+          </article>
+        </div>
+
+        <div class="card admin-bookings-card">
+          <div class="section-heading">
+            <p class="eyebrow">Bookings</p>
+            <h2>Booking inbox</h2>
+            <p id="booking-count" class="form-note">0 requests saved in this browser.</p>
+          </div>
+
+          <div class="button-row admin-toolbar">
+            <button id="refresh-bookings" class="btn btn-secondary" type="button">Refresh list</button>
+            <button id="clear-bookings" class="btn btn-secondary" type="button">Clear all</button>
+          </div>
+
+          <div class="pricing-table-wrap">
+            <table class="pricing-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Name</th>
+                  <th>Contact</th>
+                  <th>Service</th>
+                  <th>Notes</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="booking-table-body">
+                <tr>
+                  <td colspan="7">No booking requests saved yet.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2 class="footer-title">Bottle Lake Bikes</h2>
+        <p>Private admin area.</p>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Contact</h3>
+        <ul class="footer-list">
+          <li><a href="tel:0274479362">027 447 9362</a></li>
+          <li><a href="mailto:contact@bottlelakebikes.co.nz">contact@bottlelakebikes.co.nz</a></li>
+          <li>43 Broadhaven Ave, Parklands, Christchurch</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Hours</h3>
+        <p>7:30am-4:00pm</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="animations.js" defer></script>
+  <script src="admin-console.js" defer></script>
+</body>
+</html>

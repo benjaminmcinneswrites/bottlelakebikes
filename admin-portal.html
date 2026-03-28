@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | Bottle Lake Bikes</title>
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta
+    name="description"
+    content="Private admin login for Bottle Lake Bikes."
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-admin-page="login">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-logo" href="index.html">Bottle Lake Bikes</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="eyebrow">Private Admin</p>
+        <h1>Admin access</h1>
+        <p class="lead">
+          This page is intentionally not linked in the site navigation.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="card form-card">
+          <p id="auth-mode-copy" class="form-note"></p>
+
+          <form id="admin-auth-form" novalidate>
+            <div class="form-field">
+              <label for="admin-username">Username</label>
+              <input type="text" id="admin-username" name="admin-username" autocomplete="username" required>
+            </div>
+
+            <div class="form-field">
+              <label for="admin-password">Password</label>
+              <input type="password" id="admin-password" name="admin-password" autocomplete="current-password" required>
+            </div>
+
+            <div class="form-field" id="confirm-password-wrap" hidden>
+              <label for="admin-password-confirm">Confirm password</label>
+              <input
+                type="password"
+                id="admin-password-confirm"
+                name="admin-password-confirm"
+                autocomplete="new-password"
+              >
+            </div>
+
+            <p id="auth-feedback" class="admin-alert" hidden></p>
+
+            <button id="auth-submit-button" class="btn btn-primary btn-full" type="submit">
+              Sign in
+            </button>
+          </form>
+
+          <p class="form-note admin-meta">
+            Starter note: this login stores credentials in browser storage. Move auth server-side before production use.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2 class="footer-title">Bottle Lake Bikes</h2>
+        <p>Private admin area.</p>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Contact</h3>
+        <ul class="footer-list">
+          <li><a href="tel:0274479362">027 447 9362</a></li>
+          <li><a href="mailto:contact@bottlelakebikes.co.nz">contact@bottlelakebikes.co.nz</a></li>
+          <li>43 Broadhaven Ave, Parklands, Christchurch</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Hours</h3>
+        <p>7:30am-4:00pm</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="animations.js" defer></script>
+  <script src="admin-console.js" defer></script>
+</body>
+</html>
