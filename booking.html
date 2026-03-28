@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking | Bottle Lake Bikes</title>
+  <meta
+    name="description"
+    content="Book a bike service with Bottle Lake Bikes. Send through your details and service request using the booking form."
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-logo" href="index.html">Bottle Lake Bikes</a>
+
+      <!-- Main Navigation -->
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="buying-selling.html">Buying &amp; Selling</a></li>
+          <li><a href="booking.html" aria-current="page">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Intro -->
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="eyebrow">Booking</p>
+        <h1>Book your bike in for service.</h1>
+        <p class="lead">
+          Use the form below to send through your booking request. Bookings will be confirmed manually,
+          so someone will be in touch after your request is received.
+        </p>
+      </div>
+    </section>
+
+    <!-- Booking Content -->
+    <section class="section">
+      <div class="container form-layout">
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">How it works</p>
+            <h2>Simple booking process</h2>
+          </div>
+
+          <div class="card">
+            <ol class="styled-steps">
+              <li>Fill in your contact details and let us know what service you think you need.</li>
+              <li>If you are unsure, choose the <strong>Unsure</strong> option and add a few notes.</li>
+              <li>Your booking request will be reviewed manually.</li>
+              <li>You will be contacted to confirm the booking details.</li>
+            </ol>
+          </div>
+
+        </div>
+
+        <!-- Booking Form -->
+        <div class="card form-card">
+          <form action="#" method="post">
+            <!-- Name Field -->
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+
+            <!-- Phone Field -->
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+            </div>
+
+            <!-- Service Needed Field -->
+            <div class="form-field">
+              <label for="service-needed">Service needed</label>
+              <select id="service-needed" name="service-needed" required>
+                <option value="" selected disabled>Select a service</option>
+                <option value="basic-service">Basic Service</option>
+                <option value="intermediate-service">Intermediate Service</option>
+                <option value="advanced-service">Advanced Service</option>
+                <option value="brake-tune">Brake Tune</option>
+                <option value="gear-tune">Gear Tune</option>
+                <option value="safety-check">Comprehensive Safety Check</option>
+                <option value="bottom-bracket">Bottom Bracket Service or Replacement</option>
+                <option value="unsure">Unsure</option>
+              </select>
+            </div>
+
+            <!-- Notes Field -->
+            <div class="form-field">
+              <label for="notes">Comment / notes</label>
+              <textarea
+                id="notes"
+                name="notes"
+                rows="6"
+                placeholder="Tell us a little about your bike or what work you think it might need."
+              ></textarea>
+            </div>
+
+            <!-- Form Note -->
+            <p class="form-note">
+              Bookings will be confirmed manually.
+            </p>
+
+            <!-- Submit Button -->
+            <button class="btn btn-primary btn-full" type="submit">Send Booking Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secondary Contact Prompt -->
+    <section class="section section-alt">
+      <div class="container cta-panel">
+        <div>
+          <p class="eyebrow">Prefer to contact directly?</p>
+          <h2>Phone or email works too.</h2>
+          <p>
+            If you would rather talk through your bike’s needs first, visit the contact page for direct details.
+          </p>
+        </div>
+        <div class="button-row">
+          <a class="btn btn-secondary" href="contact.html">View Contact Details</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2 class="footer-title">Bottle Lake Bikes</h2>
+        <p>
+          Local bike servicing and repairs in Parklands, Christchurch.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Contact</h3>
+        <ul class="footer-list">
+          <li><a href="tel:0274479362">027 447 9362</a></li>
+          <li><a href="mailto:contact@bottlelakebikes.co.nz">contact@bottlelakebikes.co.nz</a></li>
+          <li>43 Broadhaven Ave, Parklands, Christchurch</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Hours</h3>
+        <p>7:30am–4:00pm</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="animations.js" defer></script>
+</body>
+</html>
