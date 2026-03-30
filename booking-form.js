@@ -39,6 +39,12 @@
     return field.value.trim();
   };
 
+  var readCheckedValues = function (selector) {
+    return Array.prototype.map.call(form.querySelectorAll(selector), function (field) {
+      return field.value;
+    });
+  };
+
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -50,7 +56,10 @@
         name: readFieldValue("#name"),
         email: readFieldValue("#email"),
         phone: readFieldValue("#phone"),
+        preferredContactMethod: readFieldValue("#preferred-contact-method"),
+        bikeType: readFieldValue("#bike-type"),
         service: readFieldValue("#service-needed"),
+        addOns: readCheckedValues('input[name="service-addons"]:checked'),
         notes: readFieldValue("#notes")
       };
 

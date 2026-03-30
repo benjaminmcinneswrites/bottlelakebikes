@@ -234,7 +234,7 @@
       if (!bookings.length) {
         var emptyRow = document.createElement("tr");
         var emptyCell = document.createElement("td");
-        emptyCell.colSpan = 7;
+        emptyCell.colSpan = 11;
         emptyCell.textContent = "No booking requests saved yet.";
         emptyRow.appendChild(emptyCell);
         tableBody.appendChild(emptyRow);
@@ -252,18 +252,44 @@
         nameCell.textContent = booking.name || "Unknown";
         row.appendChild(nameCell);
 
-        var contactCell = document.createElement("td");
-        var contactText = (booking.email || "No email") + " | " + (booking.phone || "No phone");
-        contactCell.textContent = contactText;
-        row.appendChild(contactCell);
+        var emailCell = document.createElement("td");
+        emailCell.textContent = booking.email || "No email";
+        row.appendChild(emailCell);
+
+        var phoneCell = document.createElement("td");
+        phoneCell.textContent = booking.phone || "No phone";
+        row.appendChild(phoneCell);
+
+        var preferredContactCell = document.createElement("td");
+        preferredContactCell.textContent = booking.preferredContactMethod
+          ? formatService(booking.preferredContactMethod)
+          : "-";
+        row.appendChild(preferredContactCell);
+
+        var bikeTypeCell = document.createElement("td");
+        bikeTypeCell.textContent = booking.bikeType || "-";
+        row.appendChild(bikeTypeCell);
 
         var serviceCell = document.createElement("td");
         serviceCell.textContent = formatService(booking.service);
         row.appendChild(serviceCell);
 
-        var notesCell = document.createElement("td");
-        notesCell.textContent = booking.notes || "-";
-        row.appendChild(notesCell);
+        var addOnsCell = document.createElement("td");
+        if (Array.isArray(booking.addOns) && booking.addOns.length) {
+          var addOnsText = booking.addOns
+            .map(function (item) {
+              return formatService(item);
+            })
+            .join(", ");
+          addOnsCell.textContent = addOnsText;
+        } else {
+          addOnsCell.textContent = "-";
+        }
+        row.appendChild(addOnsCell);
+
+        var commentsCell = document.createElement("td");
+        commentsCell.textContent = booking.notes || "-";
+        row.appendChild(commentsCell);
 
         var statusCell = document.createElement("td");
         var statusPill = document.createElement("span");

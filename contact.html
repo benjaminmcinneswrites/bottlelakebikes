@@ -14,91 +14,69 @@
   <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="site-logo" href="index.html">Bottle Lake Bikes</a>
+      <a class="site-logo" href="index.html"><img class="site-logo-image" src="Logo v3.0.png" alt="Bottle Lake Bikes"></a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
 
       <!-- Main Navigation -->
-      <nav class="site-nav" aria-label="Primary navigation">
+      <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Repairs and Servicing</a></li>
+          <li><a href="buying-selling.html">Buying and Selling</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="buying-selling.html">Buying &amp; Selling</a></li>
-          <li><a href="booking.html">Booking</a></li>
           <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="booking.html">Bookings</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Page Intro -->
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="eyebrow">Contact</p>
-        <h1>Get in touch with Bottle Lake Bikes.</h1>
-        <p class="lead">
-          For service enquiries, booking questions, or buying and selling conversations,
-          use the details below to get in contact.
-        </p>
-      </div>
-    </section>
-
     <!-- Contact Details -->
     <section class="section">
       <div class="container form-layout">
         <div class="card">
           <h2>Contact details</h2>
           <div class="contact-list">
-            <p><strong>Phone:</strong> <a href="tel:0274479362">027 447 9362</a></p>
+            <p><strong>Phone:</strong> <a href="tel:02102901656">021 0290 1656</a></p>
             <p><strong>Email:</strong> <a href="mailto:contact@bottlelakebikes.co.nz">contact@bottlelakebikes.co.nz</a></p>
             <p><strong>Address:</strong> 43 Broadhaven Ave<br>Parklands<br>Christchurch</p>
-            <p><strong>Open hours:</strong> 7:30am–4:00pm</p>
+            <p><strong>Open hours:</strong> Monday-Friday, 7:30am-4:00pm</p>
           </div>
         </div>
 
-        <!-- Image placeholder -->
-        <div class="image-placeholder image-placeholder-tall" aria-label="Image placeholder">
-          <span>Image placeholder</span>
+        <div class="card form-card">
+          <h2>Contact us</h2>
+          <form action="#" method="post">
+            <div class="form-field">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" name="contact-name" autocomplete="name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="contact-email" autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Send</button>
+          </form>
         </div>
       </div>
     </section>
 
-    <!-- Contact Help Section -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="card-grid two-up">
-          <article class="card">
-            <h2>Service enquiries</h2>
-            <p>
-              Get in touch if you want to discuss what service your bike may need before booking.
-            </p>
-          </article>
-
-          <article class="card">
-            <h2>Buying and selling questions</h2>
-            <p>
-              Contact Bottle Lake Bikes to ask about refurbished bikes, direct sales, or commission selling options.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section">
-      <div class="container cta-panel">
-        <div>
-          <p class="eyebrow">Booking</p>
-          <h2>Ready to send through a booking request?</h2>
-          <p>
-            Head to the booking page and fill in the service form. Bookings will be confirmed manually.
-          </p>
-        </div>
-        <div class="button-row">
-          <a class="btn btn-primary" href="booking.html">Go to Booking</a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- Site Footer -->
@@ -107,14 +85,14 @@
       <div>
         <h2 class="footer-title">Bottle Lake Bikes</h2>
         <p>
-          Local bike servicing and repairs in Parklands, Christchurch.
+          Local bike servicing, repairs and sales in Parklands, Christchurch.
         </p>
       </div>
 
       <div>
         <h3 class="footer-heading">Contact</h3>
         <ul class="footer-list">
-          <li><a href="tel:0274479362">027 447 9362</a></li>
+          <li><a href="tel:02102901656">021 0290 1656</a></li>
           <li><a href="mailto:contact@bottlelakebikes.co.nz">contact@bottlelakebikes.co.nz</a></li>
           <li>43 Broadhaven Ave, Parklands, Christchurch</li>
         </ul>
@@ -122,11 +100,13 @@
 
       <div>
         <h3 class="footer-heading">Hours</h3>
-        <p>7:30am–4:00pm</p>
+        <p>Monday - Friday<br>7:30am - 4:00pm<br>After hours appointments available on request</p>
       </div>
     </div>
   </footer>
 
+  <script src="nav.js" defer></script>
   <script src="animations.js" defer></script>
 </body>
 </html>
+

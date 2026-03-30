@@ -14,17 +14,26 @@
   <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="site-logo" href="index.html">Bottle Lake Bikes</a>
+      <a class="site-logo" href="index.html"><img class="site-logo-image" src="Logo v3.0.png" alt="Bottle Lake Bikes"></a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
 
       <!-- Main Navigation -->
-      <nav class="site-nav" aria-label="Primary navigation">
+      <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Repairs and Servicing</a></li>
+          <li><a href="buying-selling.html">Buying and Selling</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="buying-selling.html">Buying &amp; Selling</a></li>
-          <li><a href="booking.html" aria-current="page">Booking</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="booking.html" aria-current="page">Bookings</a></li>
         </ul>
       </nav>
     </div>
@@ -37,8 +46,8 @@
         <p class="eyebrow">Booking</p>
         <h1>Book your bike in for service.</h1>
         <p class="lead">
-          Use the form below to send through your booking request. Bookings will be confirmed manually,
-          so someone will be in touch after your request is received.
+          Personal service with fast turnaround&mdash;often same or next day. Call 021 0290 1656
+          for fastest service, or fill out the booking form.
         </p>
       </div>
     </section>
@@ -54,10 +63,10 @@
 
           <div class="card">
             <ol class="styled-steps">
-              <li>Fill in your contact details and let us know what service you think you need.</li>
-              <li>If you are unsure, choose the <strong>Unsure</strong> option and add a few notes.</li>
-              <li>Your booking request will be reviewed manually.</li>
-              <li>You will be contacted to confirm the booking details.</li>
+              <li>Fill out the form.</li>
+              <li>Let us know what service you need, as well as any add-ons. Select <strong>Unsure</strong> or <strong>Other</strong> if needed.</li>
+              <li>Let us know your preferred booking day/time and any other details in the comments box.</li>
+              <li>We will be in touch to confirm your booking.</li>
             </ol>
           </div>
 
@@ -84,6 +93,29 @@
               <input type="tel" id="phone" name="phone" autocomplete="tel" required>
             </div>
 
+            <!-- Preferred Contact Method -->
+            <div class="form-field">
+              <label for="preferred-contact-method">Preferred contact method</label>
+              <select id="preferred-contact-method" name="preferred-contact-method" required>
+                <option value="" selected disabled>Select contact method</option>
+                <option value="phone">Phone</option>
+                <option value="email">Email</option>
+                <option value="text-message">Text message</option>
+              </select>
+            </div>
+
+            <!-- Type of Bike -->
+            <div class="form-field">
+              <label for="bike-type">Type of bike</label>
+              <input
+                type="text"
+                id="bike-type"
+                name="bike-type"
+                placeholder="e.g. Mountain bike, Road bike, E-bike, Kids bike"
+                required
+              >
+            </div>
+
             <!-- Service Needed Field -->
             <div class="form-field">
               <label for="service-needed">Service needed</label>
@@ -92,22 +124,30 @@
                 <option value="basic-service">Basic Service</option>
                 <option value="intermediate-service">Intermediate Service</option>
                 <option value="advanced-service">Advanced Service</option>
-                <option value="brake-tune">Brake Tune</option>
-                <option value="gear-tune">Gear Tune</option>
-                <option value="safety-check">Comprehensive Safety Check</option>
-                <option value="bottom-bracket">Bottom Bracket Service or Replacement</option>
                 <option value="unsure">Unsure</option>
+                <option value="other">Other</option>
               </select>
             </div>
 
+            <!-- Service Add-ons -->
+            <fieldset class="form-field">
+              <legend>Service add-ons (optional)</legend>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="service-addons" value="fork-lowers"> Fork Lowers</label>
+                <label><input type="checkbox" name="service-addons" value="full-suspension-pivot-clean-and-grease"> Full Suspension Pivot Clean and Grease</label>
+                <label><input type="checkbox" name="service-addons" value="dropper-post-service"> Dropper Post Service</label>
+                <label><input type="checkbox" name="service-addons" value="brake-bleed"> Brake Bleed</label>
+              </div>
+            </fieldset>
+
             <!-- Notes Field -->
             <div class="form-field">
-              <label for="notes">Comment / notes</label>
+              <label for="notes">Comments</label>
               <textarea
                 id="notes"
                 name="notes"
                 rows="6"
-                placeholder="Tell us a little about your bike or what work you think it might need."
+                placeholder="Let us know your preferred booking day/time and any other details."
               ></textarea>
             </div>
 
@@ -122,22 +162,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Secondary Contact Prompt -->
-    <section class="section section-alt">
-      <div class="container cta-panel">
-        <div>
-          <p class="eyebrow">Prefer to contact directly?</p>
-          <h2>Phone or email works too.</h2>
-          <p>
-            If you would rather talk through your bike’s needs first, visit the contact page for direct details.
-          </p>
-        </div>
-        <div class="button-row">
-          <a class="btn btn-secondary" href="contact.html">View Contact Details</a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- Site Footer -->
@@ -146,14 +170,14 @@
       <div>
         <h2 class="footer-title">Bottle Lake Bikes</h2>
         <p>
-          Local bike servicing and repairs in Parklands, Christchurch.
+          Local bike servicing, repairs and sales in Parklands, Christchurch.
         </p>
       </div>
 
       <div>
         <h3 class="footer-heading">Contact</h3>
         <ul class="footer-list">
-          <li><a href="tel:0274479362">027 447 9362</a></li>
+          <li><a href="tel:02102901656">021 0290 1656</a></li>
           <li><a href="mailto:contact@bottlelakebikes.co.nz">contact@bottlelakebikes.co.nz</a></li>
           <li>43 Broadhaven Ave, Parklands, Christchurch</li>
         </ul>
@@ -161,12 +185,14 @@
 
       <div>
         <h3 class="footer-heading">Hours</h3>
-        <p>7:30am–4:00pm</p>
+        <p>Monday - Friday<br>7:30am - 4:00pm<br>After hours appointments available on request</p>
       </div>
     </div>
   </footer>
 
+  <script src="nav.js" defer></script>
   <script src="animations.js" defer></script>
   <script src="booking-form.js" defer></script>
 </body>
 </html>
+

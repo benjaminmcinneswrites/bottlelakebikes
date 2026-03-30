@@ -14,17 +14,26 @@
   <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="site-logo" href="index.html">Bottle Lake Bikes</a>
+      <a class="site-logo" href="index.html"><img class="site-logo-image" src="Logo v3.0.png" alt="Bottle Lake Bikes"></a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
 
       <!-- Main Navigation -->
-      <nav class="site-nav" aria-label="Primary navigation">
+      <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html" aria-current="page">Repairs and Servicing</a></li>
+          <li><a href="buying-selling.html">Buying and Selling</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="services.html" aria-current="page">Services</a></li>
-          <li><a href="buying-selling.html">Buying &amp; Selling</a></li>
-          <li><a href="booking.html">Booking</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="booking.html">Bookings</a></li>
         </ul>
       </nav>
     </div>
@@ -43,62 +52,115 @@
       </div>
     </section>
 
+    <!-- Booking Prompt -->
+    <section class="section section-alt">
+      <div class="container cta-panel">
+        <div>
+          <p class="eyebrow">Book in</p>
+          <h2>Ready to arrange a service?</h2>
+          <p>
+            We specialise in quick turnaround and can often get you in for a service in 1-2 days.
+            Use our booking form below or give us a call on 021 0290 1656.
+          </p>
+        </div>
+        <div class="button-row">
+          <a class="btn btn-primary" href="booking.html">Make a Booking</a>
+        </div>
+      </div>
+    </section>
     <!-- Service Packages -->
     <section class="section">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Service packages</p>
           <h2>Choose the level of service that suits your bike.</h2>
+          <p>
+            If you are unsure what your bike needs we are more than happy to discuss it with you over the phone or in person
+          </p>
         </div>
 
-        <div class="card-grid three-up">
+        <div class="card-grid service-package-grid">
           <article class="card package-card">
-            <h3>Basic Service</h3>
-            <p class="price">$99</p>
+            <h3>Tune-Up</h3>
+            <p class="price">$89</p>
             <ul class="styled-list">
-              <li>Brake Tune</li>
-              <li>Gear Tune</li>
-              <li>Bolt Check</li>
-              <li>Safety Check</li>
-              <li>Clean Bike and Wheels</li>
+              <li>Brake tune</li>
+              <li>Gear tune</li>
+              <li>Bolt check</li>
+              <li>Safety check</li>
+              <li>Clean bike &amp; wheels</li>
+              <li>Oil chain</li>
             </ul>
           </article>
 
           <article class="card package-card">
-            <h3>Intermediate Service</h3>
+            <h3>General Service</h3>
             <p class="price">$149</p>
             <ul class="styled-list">
-              <li>Brake Tune</li>
-              <li>Gear Tune</li>
-              <li>Bolt Check</li>
-              <li>Safety Check</li>
-              <li>Clean Bike and Wheels</li>
-              <li>Lubricate or Replace Cables (new cables have an additional cost)</li>
-              <li>Clean Drivetrain</li>
+              <li>Brake tune</li>
+              <li>Gear tune</li>
+              <li>Bolt check</li>
+              <li>Safety check</li>
+              <li>Clean bike &amp; wheels</li>
+              <li>Oil chain</li>
+              <li>Lubricate or replace cables (new cables at additional cost)</li>
+              <li>Drivetrain deep clean</li>
             </ul>
           </article>
 
           <article class="card package-card">
-            <h3>Advanced Service</h3>
+            <h3>Full Service</h3>
             <p class="price">$199</p>
             <ul class="styled-list">
-              <li>Brake Tune</li>
-              <li>Gear Tune</li>
-              <li>Bolt Check</li>
-              <li>Safety Check</li>
-              <li>Clean Bike and Wheels</li>
-              <li>Lubricate or Replace Cables (new cables have an additional cost)</li>
-              <li>Clean Drivetrain</li>
-              <li>True Wheels</li>
-              <li>Service Headset</li>
-              <li>Service Hubs and Freehub</li>
-              <li>Service Bottom Bracket</li>
+              <li>Brake tune</li>
+              <li>Gear tune</li>
+              <li>Bolt check</li>
+              <li>Safety check</li>
+              <li>Clean bike &amp; wheels</li>
+              <li>Oil chain</li>
+              <li>Lubricate or replace cables (new cables at additional cost)</li>
+              <li>Drivetrain deep clean</li>
+              <li>Wheel truing</li>
+              <li>Service headset</li>
+              <li>Service hubs &amp; freehub</li>
+              <li>Service bottom bracket</li>
+            </ul>
+          </article>
+
+          <article class="card package-card">
+            <h3>MTB Full Overhaul</h3>
+            <p class="price">$499</p>
+            <p><strong>Best value for full-suspension bikes</strong></p>
+            <p>
+              Complete service for full-suspension bikes. Suspension, pivots, dropper, and all key
+              components serviced&mdash;everything running smooth, quiet, and like new.
+            </p>
+            <ul class="styled-list">
+              <li>Everything in Full Service</li>
+              <li>Fork lower service</li>
+              <li>Rear shock air can service</li>
+              <li>Full suspension pivot clean &amp; grease</li>
+              <li>Dropper post service</li>
+              <li>Brake bleed</li>
+            </ul>
+          </article>
+
+          <article class="card package-card">
+            <h3>Road / Gravel Full Overhaul</h3>
+            <p class="price">$259</p>
+            <p>
+              Complete service for road and gravel bikes&mdash;ideal for keeping everything running smoothly
+              after a big season of riding.
+            </p>
+            <ul class="styled-list">
+              <li>Everything in Full Service</li>
+              <li>Brake bleed</li>
+              <li>Bar tape replaced (bar tape not included)</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
-
     <!-- Add-ons -->
     <section class="section section-alt">
       <div class="container">
@@ -106,8 +168,8 @@
           <p class="eyebrow">Service add-ons</p>
           <h2>Extra work for bikes that need more specific attention.</h2>
           <p>
-            The following add-ons are available to meet the specific service requirements of your bike.
-            We don’t include them in the packages because we don’t want to charge you for work that your bike doesn’t need.
+            The following add-ons are available to suit your bike&rsquo;s specific needs. We don&rsquo;t include
+            them in standard packages, so you only pay for what your bike actually requires.
           </p>
         </div>
 
@@ -115,10 +177,11 @@
           <article class="card">
             <h3>Available add-ons</h3>
             <ul class="styled-list">
-              <li><strong>Fork Lowers</strong> — $60 per unit (plus seals if required)</li>
-              <li><strong>Full Suspension Pivot Clean and Grease</strong> — $90 (bearing replacement available if necessary)</li>
-              <li><strong>Dropper Post Service</strong> — $60 (plus parts if required)</li>
-              <li><strong>Brake Bleed</strong> — $35 for Shimano + Tektro, $45 for Sram (price per brake)</li>
+              <li><strong>Fork lowers</strong> &mdash; $65 per unit (plus seals if required)</li>
+              <li><strong>Rear shock air can service</strong> &mdash; $65</li>
+              <li><strong>Full suspension pivot clean &amp; grease</strong> &mdash; $90 (bearing replacement available if required)</li>
+              <li><strong>Dropper post service</strong> &mdash; $60 (plus parts if required)</li>
+              <li><strong>Brake bleed</strong> &mdash; $25 (Shimano/Tektro), $40 (SRAM) (per brake)</li>
             </ul>
           </article>
 
@@ -129,7 +192,6 @@
         </div>
       </div>
     </section>
-
     <!-- Individual Service Items -->
     <section class="section">
       <div class="container">
@@ -137,8 +199,7 @@
           <p class="eyebrow">Individual service items</p>
           <h2>Only need one or two things done?</h2>
           <p>
-            Just need one thing done, or a few specific things? We are always happy to discuss and quote your
-            specific servicing needs, but these prices will give you an idea of what to expect.
+            Just need one or two things done? We&rsquo;re happy to help.
           </p>
         </div>
 
@@ -153,40 +214,43 @@
             </thead>
             <tbody>
               <tr>
-                <td>Brake Tune</td>
+                <td>Puncture repair or tyre replacement</td>
+                <td>$15</td>
+              </tr>
+              <tr>
+                <td>Brake tune</td>
                 <td>$15 per brake</td>
               </tr>
               <tr>
-                <td>Gear Tune</td>
-                <td>$30</td>
+                <td>Gear tune</td>
+                <td>from $25</td>
               </tr>
               <tr>
-                <td>Comprehensive Safety Check</td>
+                <td>Comprehensive safety check</td>
                 <td>$40</td>
               </tr>
               <tr>
-                <td>Bottom Bracket Service or Replacement</td>
+                <td>Bottom bracket service or replacement</td>
                 <td>$35</td>
+              </tr>
+              <tr>
+                <td>Fork lowers / rear shock air can service</td>
+                <td>$65 (plus seals if required)</td>
+              </tr>
+              <tr>
+                <td>Dropper post service</td>
+                <td>$60 (plus parts if required)</td>
+              </tr>
+              <tr>
+                <td>Wheel build</td>
+                <td>$90</td>
+              </tr>
+              <tr>
+                <td>Bar tape replacement</td>
+                <td>$25</td>
               </tr>
             </tbody>
           </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section section-alt">
-      <div class="container cta-panel">
-        <div>
-          <p class="eyebrow">Book in</p>
-          <h2>Ready to arrange a service?</h2>
-          <p>
-            Use the booking page to send through your details and let Bottle Lake Bikes know what your bike needs.
-          </p>
-        </div>
-        <div class="button-row">
-          <a class="btn btn-primary" href="booking.html">Go to Booking</a>
-          <a class="btn btn-secondary" href="contact.html">Ask a Question</a>
         </div>
       </div>
     </section>
@@ -198,14 +262,14 @@
       <div>
         <h2 class="footer-title">Bottle Lake Bikes</h2>
         <p>
-          Local bike servicing and repairs in Parklands, Christchurch.
+          Local bike servicing, repairs and sales in Parklands, Christchurch.
         </p>
       </div>
 
       <div>
         <h3 class="footer-heading">Contact</h3>
         <ul class="footer-list">
-          <li><a href="tel:0274479362">027 447 9362</a></li>
+          <li><a href="tel:02102901656">021 0290 1656</a></li>
           <li><a href="mailto:contact@bottlelakebikes.co.nz">contact@bottlelakebikes.co.nz</a></li>
           <li>43 Broadhaven Ave, Parklands, Christchurch</li>
         </ul>
@@ -213,11 +277,12 @@
 
       <div>
         <h3 class="footer-heading">Hours</h3>
-        <p>7:30am–4:00pm</p>
+        <p>Monday - Friday<br>7:30am - 4:00pm<br>After hours appointments available on request</p>
       </div>
     </div>
   </footer>
 
+  <script src="nav.js" defer></script>
   <script src="animations.js" defer></script>
 </body>
 </html>
