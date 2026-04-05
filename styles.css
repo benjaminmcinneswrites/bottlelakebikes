@@ -396,6 +396,14 @@ ol {
   min-height: 280px;
 }
 
+.service-addons-photo-frame {
+  min-height: 360px;
+}
+
+.service-addons-photo {
+  height: 100%;
+}
+
 .page-hero {
   padding: var(--space-2xl) 0 var(--space-xl);
 }
@@ -601,9 +609,38 @@ ol {
   align-items: center;
 }
 
-.contact-summary p,
-.contact-list p {
+.contact-summary p {
   margin-bottom: 0.6rem;
+}
+
+.contact-list {
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: block;
+}
+
+.contact-item dt {
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.contact-item dt::after {
+  content: ":";
+}
+
+.contact-item dd {
+  margin: 0.2rem 0 0;
+}
+
+.contact-address {
+  margin: 0;
+  font-style: normal;
+  line-height: 1.45;
 }
 
 /* =========================================
@@ -1117,6 +1154,10 @@ fieldset.form-field {
     min-height: 240px;
   }
 
+  .service-addons-photo-frame {
+    min-height: 280px;
+  }
+
   .about-image {
     min-height: 320px;
   }
@@ -1127,4 +1168,5 @@ fieldset.form-field {
   .cta-panel {
     border-radius: var(--radius-md);
   }
+
 }
