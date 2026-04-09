@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-NZ">
 <head>
   <meta charset="UTF-8">
@@ -6,14 +6,17 @@
   <title>Booking | Bottle Lake Bikes</title>
   <meta
     name="description"
-    content="Book a bike service with Bottle Lake Bikes. Send through your details and service request using the booking form."
+    content="Book a bike service with Bottle Lake Bikes using our online Setmore booking page."
   >
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="site-announcement" role="status" aria-live="polite">
     <div class="container">
-      <p><strong>Your new local workshop is here!</strong> Bottle Lake Bikes opens Thursday, April 16th</p>
+      <p>
+        <strong data-banner-title>Your new local workshop is here!</strong>
+        <span data-banner-message>Bottle Lake Bikes opens Thursday, April 16th</span>
+      </p>
     </div>
   </div>
 
@@ -53,7 +56,7 @@
         <h1>Book your bike in for service.</h1>
         <p class="lead">
           Personal service with fast turnaround&mdash;often same or next day. Call 021 0290 1656
-          for fastest service, or fill out the booking form.
+          for fastest service, or book online with Setmore.
         </p>
       </div>
     </section>
@@ -69,102 +72,39 @@
 
           <div class="card">
             <ol class="styled-steps">
-              <li>Fill out the form.</li>
-              <li>Let us know what service you need, as well as any add-ons. Select <strong>Unsure</strong> or <strong>Other</strong> if needed.</li>
-              <li>Let us know your preferred booking day/time and any other details in the comments box.</li>
-              <li>We will be in touch to confirm your booking.</li>
+              <li>Click <strong>Book now</strong> to open our secure Setmore booking page.</li>
+              <li>Choose the service you need, then pick a day and time that suits.</li>
+              <li>Enter your details and confirm your booking online.</li>
+              <li>You will get confirmation straight away, and we will follow up if needed.</li>
             </ol>
           </div>
 
         </div>
 
-        <!-- Booking Form -->
-        <div class="card form-card">
-          <form id="booking-request-form" action="#" method="post">
-            <!-- Name Field -->
-            <div class="form-field">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" autocomplete="name" required>
-            </div>
-
-            <!-- Email Field -->
-            <div class="form-field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" autocomplete="email" required>
-            </div>
-
-            <!-- Phone Field -->
-            <div class="form-field">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" autocomplete="tel" required>
-            </div>
-
-            <!-- Preferred Contact Method -->
-            <div class="form-field">
-              <label for="preferred-contact-method">Preferred contact method</label>
-              <select id="preferred-contact-method" name="preferred-contact-method" required>
-                <option value="" selected disabled>Select contact method</option>
-                <option value="phone">Phone</option>
-                <option value="email">Email</option>
-                <option value="text-message">Text message</option>
-              </select>
-            </div>
-
-            <!-- Type of Bike -->
-            <div class="form-field">
-              <label for="bike-type">Type of bike</label>
-              <input
-                type="text"
-                id="bike-type"
-                name="bike-type"
-                placeholder="e.g. Mountain bike, Road bike, E-bike, Kids bike"
-                required
-              >
-            </div>
-
-            <!-- Service Needed Field -->
-            <div class="form-field">
-              <label for="service-needed">Service needed</label>
-              <select id="service-needed" name="service-needed" required>
-                <option value="" selected disabled>Select a service</option>
-                <option value="basic-service">Basic Service</option>
-                <option value="intermediate-service">Intermediate Service</option>
-                <option value="advanced-service">Advanced Service</option>
-                <option value="unsure">Unsure</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <!-- Service Add-ons -->
-            <fieldset class="form-field">
-              <legend>Service add-ons (optional)</legend>
-              <div class="checkbox-group">
-                <label><input type="checkbox" name="service-addons" value="fork-lowers"> Fork Lowers</label>
-                <label><input type="checkbox" name="service-addons" value="full-suspension-pivot-clean-and-grease"> Full Suspension Pivot Clean and Grease</label>
-                <label><input type="checkbox" name="service-addons" value="dropper-post-service"> Dropper Post Service</label>
-                <label><input type="checkbox" name="service-addons" value="brake-bleed"> Brake Bleed</label>
-              </div>
-            </fieldset>
-
-            <!-- Notes Field -->
-            <div class="form-field">
-              <label for="notes">Comments</label>
-              <textarea
-                id="notes"
-                name="notes"
-                rows="6"
-                placeholder="Let us know your preferred booking day/time and any other details."
-              ></textarea>
-            </div>
-
-            <!-- Form Note -->
-            <p class="form-note">
-              Bookings will be confirmed manually.
-            </p>
-
-            <!-- Submit Button -->
-            <button class="btn btn-primary btn-full" type="submit">Send Booking Request</button>
-          </form>
+        <!-- Setmore Booking -->
+        <div class="card form-card setmore-booking-card">
+          <p class="eyebrow">Online booking</p>
+          <h2>Book instantly with Setmore</h2>
+          <p>
+            Check live availability, choose your preferred time, and confirm in a few quick steps.
+          </p>
+          <ul class="styled-list setmore-feature-list">
+            <li>Live appointment availability.</li>
+            <li>Instant booking confirmation.</li>
+            <li>Easy rescheduling if your plans change.</li>
+          </ul>
+          <button
+            id="Anywhere_button_iframe"
+            class="btn btn-primary btn-full anywhere-book-now-button setmore-book-now-button"
+            data-booking-url="https://bottlelakebikes.setmore.com"
+            data-new-tab="false"
+            type="button"
+          >
+            Book now
+          </button>
+          <p class="form-note">
+            Prefer to chat first? Call <a href="tel:02102901656">021 0290 1656</a>.
+          </p>
         </div>
       </div>
     </section>
@@ -196,9 +136,18 @@
     </div>
   </footer>
 
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js" defer></script>
+  <script src="firebase-config.js" defer></script>
+  <script src="firebase-client.js" defer></script>
+  <script src="banner-sync.js" defer></script>
   <script src="nav.js" defer></script>
   <script src="animations.js" defer></script>
-  <script src="booking-form.js" defer></script>
+  <script
+    id="anywhere_book_now_script"
+    type="text/javascript"
+    src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"
+  ></script>
 </body>
 </html>
 

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-NZ">
 <head>
   <meta charset="UTF-8">
@@ -14,7 +14,10 @@
 <body data-admin-page="login">
   <div class="site-announcement" role="status" aria-live="polite">
     <div class="container">
-      <p><strong>Your new local workshop is here!</strong> Bottle Lake Bikes opens Thursday, April 16th</p>
+      <p>
+        <strong data-banner-title>Your new local workshop is here!</strong>
+        <span data-banner-message>Bottle Lake Bikes opens Thursday, April 16th</span>
+      </p>
     </div>
   </div>
 
@@ -42,8 +45,8 @@
 
           <form id="admin-auth-form" novalidate>
             <div class="form-field">
-              <label for="admin-username">Username</label>
-              <input type="text" id="admin-username" name="admin-username" autocomplete="username" required>
+              <label for="admin-email">Staff email</label>
+              <input type="email" id="admin-email" name="admin-email" autocomplete="username" required>
             </div>
 
             <div class="form-field">
@@ -86,6 +89,12 @@
     </div>
   </footer>
 
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js" defer></script>
+  <script src="firebase-config.js" defer></script>
+  <script src="firebase-client.js" defer></script>
+  <script src="banner-sync.js" defer></script>
   <script src="animations.js" defer></script>
   <script src="admin-console.js" defer></script>
 </body>

@@ -883,6 +883,32 @@ fieldset.form-field {
   font-size: 0.95rem;
 }
 
+.setmore-booking-card {
+  display: grid;
+  gap: var(--space-sm);
+  align-content: start;
+}
+
+.setmore-booking-card h2 {
+  margin-bottom: 0.2rem;
+}
+
+.setmore-booking-card > p {
+  margin-bottom: 0;
+}
+
+.setmore-feature-list {
+  margin: 0 0 var(--space-sm);
+}
+
+.setmore-feature-list li:last-child {
+  margin-bottom: 0;
+}
+
+.setmore-book-now-button {
+  margin-top: var(--space-xs);
+}
+
 /* =========================================
    Admin Console
    ========================================= */

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-NZ">
 <head>
   <meta charset="UTF-8">
@@ -13,7 +13,10 @@
 <body>
   <div class="site-announcement" role="status" aria-live="polite">
     <div class="container">
-      <p><strong>Your new local workshop is here!</strong> Bottle Lake Bikes opens Thursday, April 16th</p>
+      <p>
+        <strong data-banner-title>Your new local workshop is here!</strong>
+        <span data-banner-message>Bottle Lake Bikes opens Thursday, April 16th</span>
+      </p>
     </div>
   </div>
 
@@ -125,6 +128,11 @@
     </div>
   </footer>
 
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js" defer></script>
+  <script src="firebase-config.js" defer></script>
+  <script src="firebase-client.js" defer></script>
+  <script src="banner-sync.js" defer></script>
   <script src="nav.js" defer></script>
   <script src="animations.js" defer></script>
 </body>

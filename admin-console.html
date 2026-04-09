@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-NZ">
 <head>
   <meta charset="UTF-8">
@@ -14,7 +14,10 @@
 <body data-admin-page="console">
   <div class="site-announcement" role="status" aria-live="polite">
     <div class="container">
-      <p><strong>Your new local workshop is here!</strong> Bottle Lake Bikes opens Thursday, April 16th</p>
+      <p>
+        <strong data-banner-title>Your new local workshop is here!</strong>
+        <span data-banner-message>Bottle Lake Bikes opens Thursday, April 16th</span>
+      </p>
     </div>
   </div>
 
@@ -31,9 +34,9 @@
     <section class="page-hero">
       <div class="container">
         <p class="eyebrow">Admin Console</p>
-        <h1>Manage your site starter</h1>
+        <h1>Manage your live site banner</h1>
         <p class="lead">
-          Signed in as <strong id="admin-username-label">Admin</strong>. This console is not linked from the main site.
+          Signed in as <strong id="admin-username-label">Staff</strong>. Changes here appear on all pages using the same announcement style.
         </p>
       </div>
     </section>
@@ -43,82 +46,82 @@
         <div class="card-grid two-up admin-grid-top">
           <article class="card">
             <h2>Quick edit links</h2>
-            <p class="form-note">Open any page, edit your content, then commit changes to GitHub.</p>
+            <p class="form-note">
+              Open your key pages for content updates. The banner editor on this page updates live without editing HTML.
+            </p>
             <ul class="admin-link-list">
-              <li><a class="text-link" href="index.html" target="_blank" rel="noopener">Edit home page</a></li>
-              <li><a class="text-link" href="about.html" target="_blank" rel="noopener">Edit about page</a></li>
-              <li><a class="text-link" href="services.html" target="_blank" rel="noopener">Edit services page</a></li>
-              <li><a class="text-link" href="buying-selling.html" target="_blank" rel="noopener">Edit buying &amp; selling page</a></li>
-              <li><a class="text-link" href="booking.html" target="_blank" rel="noopener">Edit booking page</a></li>
-              <li><a class="text-link" href="contact.html" target="_blank" rel="noopener">Edit contact page</a></li>
+              <li><a class="text-link" href="index.html" target="_blank" rel="noopener">Open home page</a></li>
+              <li><a class="text-link" href="services.html" target="_blank" rel="noopener">Open services page</a></li>
+              <li><a class="text-link" href="booking.html" target="_blank" rel="noopener">Open booking page</a></li>
+              <li><a class="text-link" href="contact.html" target="_blank" rel="noopener">Open contact page</a></li>
             </ul>
           </article>
 
           <article class="card">
-            <h2>Update login details</h2>
-            <form id="admin-credentials-form" novalidate>
-              <div class="form-field">
-                <label for="new-admin-username">New username</label>
-                <input type="text" id="new-admin-username" name="new-admin-username" required>
-              </div>
+            <h2>Announcement banner</h2>
+            <p class="form-note">
+              Edit this once and it updates the top banner across your whole site while keeping the same design.
+            </p>
 
+            <form id="banner-form" novalidate>
               <div class="form-field">
-                <label for="new-admin-password">New password</label>
-                <input type="password" id="new-admin-password" name="new-admin-password" required>
-              </div>
-
-              <div class="form-field">
-                <label for="new-admin-password-confirm">Confirm new password</label>
+                <label for="banner-title">Banner heading</label>
                 <input
-                  type="password"
-                  id="new-admin-password-confirm"
-                  name="new-admin-password-confirm"
+                  type="text"
+                  id="banner-title"
+                  name="banner-title"
+                  value="Your new local workshop is here!"
+                  maxlength="90"
                   required
                 >
               </div>
 
-              <p id="credentials-feedback" class="admin-alert" hidden></p>
+              <div class="form-field">
+                <label for="banner-message">Banner message</label>
+                <textarea
+                  id="banner-message"
+                  name="banner-message"
+                  rows="4"
+                  maxlength="180"
+                  required
+                >Bottle Lake Bikes opens Thursday, April 16th</textarea>
+              </div>
 
-              <button class="btn btn-primary btn-full" type="submit">Save login details</button>
+              <div class="form-field">
+                <div class="checkbox-group">
+                  <label><input type="checkbox" id="banner-enabled" name="banner-enabled" checked> Show banner on site</label>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="banner-start">Start date/time (optional)</label>
+                <input type="datetime-local" id="banner-start" name="banner-start">
+              </div>
+
+              <div class="form-field">
+                <label for="banner-end">End date/time (optional)</label>
+                <input type="datetime-local" id="banner-end" name="banner-end">
+              </div>
+
+              <div class="button-row">
+                <button class="btn btn-primary" type="submit">Save banner</button>
+                <button id="banner-reset-schedule" class="btn btn-secondary" type="button">Clear schedule</button>
+              </div>
+
+              <p id="banner-feedback" class="admin-alert" hidden></p>
+              <p id="banner-last-updated" class="form-note">Last updated: not set yet.</p>
             </form>
           </article>
         </div>
 
-        <div class="card admin-bookings-card">
-          <div class="section-heading">
-            <p class="eyebrow">Bookings</p>
-            <h2>Booking inbox</h2>
-            <p id="booking-count" class="form-note">0 requests saved in this browser.</p>
-          </div>
-
-          <div class="button-row admin-toolbar">
-            <button id="refresh-bookings" class="btn btn-secondary" type="button">Refresh list</button>
-            <button id="clear-bookings" class="btn btn-secondary" type="button">Clear all</button>
-          </div>
-
-          <div class="pricing-table-wrap">
-            <table class="pricing-table">
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Phone</th>
-                  <th>Preferred contact</th>
-                  <th>Type of bike</th>
-                  <th>Service</th>
-                  <th>Add-ons</th>
-                  <th>Comments</th>
-                  <th>Status</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody id="booking-table-body">
-                <tr>
-                  <td colspan="11">No booking requests saved yet.</td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="card">
+          <h2>Staff note</h2>
+          <p class="form-note">
+            The banner keeps your existing theme from <code>.site-announcement</code> styles. This editor only changes text,
+            visibility, and optional schedule.
+          </p>
+          <div class="button-row">
+            <a class="btn btn-secondary" href="index.html" target="_blank" rel="noopener">View live homepage</a>
           </div>
         </div>
       </div>
@@ -148,6 +151,12 @@
     </div>
   </footer>
 
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js" defer></script>
+  <script src="firebase-config.js" defer></script>
+  <script src="firebase-client.js" defer></script>
+  <script src="banner-sync.js" defer></script>
   <script src="animations.js" defer></script>
   <script src="admin-console.js" defer></script>
 </body>
