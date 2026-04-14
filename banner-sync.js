@@ -55,6 +55,14 @@
     messageNode.textContent = nextMessage;
   };
 
+  var setBannerState = function (announcement, state) {
+    if (!announcement) {
+      return;
+    }
+
+    announcement.setAttribute("data-banner-state", state);
+  };
+
   document.addEventListener("DOMContentLoaded", function () {
     var announcement = document.querySelector(".site-announcement");
     if (!announcement) {
@@ -71,10 +79,27 @@
       title: (titleNode.textContent || "").trim(),
       message: (messageNode.textContent || "").trim()
     };
+    var resolved = false;
+    var finish = function () {
+      if (resolved) {
+        return;
+      }
 
-    applyBannerState(announcement, titleNode, messageNode, null, defaults);
+      resolved = true;
+      setBannerState(announcement, "ready");
+    };
+
+    setBannerState(announcement, "loading");
+
+    var fallbackTimer = window.setTimeout(function () {
+      applyBannerState(announcement, titleNode, messageNode, null, defaults);
+      finish();
+    }, 2500);
 
     if (!window.blbFirebase || !window.blbFirebase.configured || !window.blbFirebase.bannerDoc) {
+      applyBannerState(announcement, titleNode, messageNode, null, defaults);
+      window.clearTimeout(fallbackTimer);
+      finish();
       return;
     }
 
@@ -82,13 +107,19 @@
       function (snapshot) {
         if (!snapshot || !snapshot.exists) {
           applyBannerState(announcement, titleNode, messageNode, null, defaults);
+          window.clearTimeout(fallbackTimer);
+          finish();
           return;
         }
 
         applyBannerState(announcement, titleNode, messageNode, snapshot.data(), defaults);
+        window.clearTimeout(fallbackTimer);
+        finish();
       },
       function () {
         applyBannerState(announcement, titleNode, messageNode, null, defaults);
+        window.clearTimeout(fallbackTimer);
+        finish();
       }
     );
   });

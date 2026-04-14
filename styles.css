@@ -198,6 +198,19 @@ ol {
   background:
     linear-gradient(90deg, #f7dd85 0%, #fbe8a8 50%, #f7dd85 100%);
   border-bottom: 1px solid #d5bb63;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity var(--duration-base) var(--ease-standard),
+    visibility 0s linear 0s;
+}
+
+.site-announcement[data-banner-state="loading"] {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--duration-base) var(--ease-standard),
+    visibility 0s linear var(--duration-base);
 }
 
 .site-announcement .container {
@@ -1158,6 +1171,7 @@ fieldset.form-field {
   .card,
   .feature-card,
   .image-placeholder,
+  .site-announcement,
   .nav-list a,
   .pricing-table tbody tr,
   a {
