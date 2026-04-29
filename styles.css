@@ -172,9 +172,21 @@ ol {
   margin-bottom: var(--space-xl);
 }
 
-.section-heading p:last-child {
-  max-width: 60ch;
+.section-heading p:not(.eyebrow) {
+  max-width: 68ch;
   color: var(--color-text-soft);
+}
+
+.section-heading p:not(.eyebrow):last-child {
+  margin-bottom: 0;
+}
+
+a[href^="tel:"] {
+  white-space: nowrap;
+}
+
+.phone-link {
+  font-weight: 700;
 }
 
 .text-link {
@@ -564,6 +576,10 @@ ol {
   height: 100%;
 }
 
+.service-booking-panel {
+  margin-top: var(--space-xl);
+}
+
 .service-package-grid {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   align-items: stretch;
@@ -571,14 +587,6 @@ ol {
 
 .service-package-grid .package-card {
   grid-column: span 4;
-}
-
-.service-package-grid .package-card:nth-child(4) {
-  grid-column: 3 / span 4;
-}
-
-.service-package-grid .package-card:nth-child(5) {
-  grid-column: 7 / span 4;
 }
 
 .price {
@@ -1222,16 +1230,8 @@ fieldset.form-field {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .service-package-grid .package-card,
-  .service-package-grid .package-card:nth-child(4),
-  .service-package-grid .package-card:nth-child(5) {
+  .service-package-grid .package-card {
     grid-column: auto;
-  }
-
-  .service-package-grid .package-card:nth-child(5) {
-    grid-column: 1 / -1;
-    max-width: 720px;
-    justify-self: center;
   }
 }
 
@@ -1286,12 +1286,6 @@ fieldset.form-field {
 
   .service-package-grid {
     grid-template-columns: 1fr;
-  }
-
-  .service-package-grid .package-card:nth-child(5) {
-    grid-column: auto;
-    max-width: none;
-    justify-self: stretch;
   }
 
   .hero-photo {
