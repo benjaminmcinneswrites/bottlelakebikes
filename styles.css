@@ -460,6 +460,18 @@ a[href^="tel:"] {
   padding: var(--space-2xl) 0 var(--space-xl);
 }
 
+.booking-hero {
+  padding: var(--space-xl) 0 var(--space-2xl);
+}
+
+.booking-hero .lead {
+  margin-bottom: var(--space-lg);
+}
+
+.booking-hero-actions .btn {
+  min-width: 160px;
+}
+
 /* =========================================
    Buttons
    ========================================= */
@@ -950,6 +962,158 @@ fieldset.form-field {
 }
 
 /* =========================================
+   Reviews
+   ========================================= */
+.reviews-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  min-height: 100%;
+}
+
+.review-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  align-items: flex-start;
+}
+
+.review-card h3 {
+  margin-bottom: 0.25rem;
+}
+
+.review-meta {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-soft);
+}
+
+.review-stars {
+  flex: 0 0 auto;
+  margin: 0.1rem 0 0;
+  color: #b7791f;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.review-text {
+  margin-bottom: 0;
+  color: var(--color-text);
+}
+
+/* =========================================
+   Brands
+   ========================================= */
+.brands-hero {
+  padding-bottom: var(--space-lg);
+}
+
+.brands-section {
+  padding-top: var(--space-xl);
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+}
+
+.brand-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: var(--space-md);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--duration-base) var(--ease-standard),
+    box-shadow var(--duration-base) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
+}
+
+.brand-card:hover,
+.brand-card:focus-within {
+  transform: translateY(-3px);
+  border-color: rgba(23, 63, 46, 0.25);
+  box-shadow: var(--shadow-md);
+}
+
+.brand-logo-panel,
+.brand-mark {
+  display: grid;
+  place-items: center;
+  min-height: 76px;
+  margin-bottom: var(--space-md);
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: var(--radius-md);
+}
+
+.brand-logo-panel {
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid rgba(23, 63, 46, 0.12);
+}
+
+.brand-logo-panel-dark {
+  background-color: var(--color-primary);
+  border-color: rgba(23, 63, 46, 0.18);
+}
+
+.brand-logo {
+  display: block;
+  width: 100%;
+  max-width: 160px;
+  max-height: 54px;
+  object-fit: contain;
+}
+
+.brand-logo-panel-dark .brand-logo {
+  max-height: 50px;
+}
+
+.brand-logo-scale {
+  transform: scale(2.85);
+}
+
+.brand-mark {
+  text-wrap: balance;
+  color: var(--color-primary);
+  background:
+    linear-gradient(135deg, rgba(23, 63, 46, 0.08), rgba(238, 243, 239, 0.55));
+  border: 1px solid rgba(23, 63, 46, 0.12);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.brand-card h2 {
+  margin-bottom: var(--space-xs);
+  font-size: 1.15rem;
+  letter-spacing: 0;
+}
+
+.brand-category-list {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--color-text-soft);
+}
+
+.brand-category-list li::marker {
+  color: var(--color-primary);
+}
+
+/* =========================================
    Admin Console
    ========================================= */
 .admin-meta {
@@ -1240,8 +1404,30 @@ fieldset.form-field {
     padding: var(--space-2xl) 0;
   }
 
+  .page-hero {
+    padding: var(--space-xl) 0;
+  }
+
+  .booking-hero {
+    padding: var(--space-lg) 0 var(--space-xl);
+  }
+
   .header-inner {
     align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .site-logo {
+    margin-right: 0;
+  }
+
+  .site-logo-image {
+    height: 44px;
+    max-width: min(220px, calc(100vw - 6rem));
+  }
+
+  .nav-toggle {
+    flex: 0 0 auto;
   }
 
   .site-nav {
@@ -1284,6 +1470,10 @@ fieldset.form-field {
     width: 100%;
   }
 
+  .booking-hero-actions .btn {
+    min-width: 0;
+  }
+
   .service-package-grid {
     grid-template-columns: 1fr;
   }
@@ -1307,7 +1497,8 @@ fieldset.form-field {
   .card,
   .feature-card,
   .contact-banner,
-  .cta-panel {
+  .cta-panel,
+  .brand-card {
     border-radius: var(--radius-md);
   }
 
