@@ -651,6 +651,30 @@
 
   <script>
     (function () {
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "manual";
+      }
+
+      window.addEventListener("beforeunload", function () {
+        window.scrollTo(0, 0);
+      });
+
+      window.addEventListener("pageshow", function () {
+        window.scrollTo(0, 0);
+
+        window.requestAnimationFrame(function () {
+          window.scrollTo(0, 0);
+        });
+      });
+
+      window.addEventListener("load", function () {
+        window.setTimeout(function () {
+          window.scrollTo(0, 0);
+        }, 0);
+      });
+    })();
+
+    (function () {
       var links = document.querySelectorAll("[data-site-path]");
       var assets = document.querySelectorAll("[data-site-asset]");
       var pathParts = window.location.pathname.split("/").filter(Boolean);

@@ -1043,6 +1043,11 @@ fieldset.form-field {
   grid-column: span 6;
 }
 
+.review-card-featured {
+  border-color: rgba(23, 63, 46, 0.28);
+  box-shadow: 0 22px 44px rgba(16, 39, 29, 0.12);
+}
+
 .review-card::before {
   content: "";
   position: absolute;
@@ -1468,7 +1473,17 @@ fieldset.form-field {
   will-change: auto;
 }
 
-.js-enhanced.motion-ready .brand-card.reveal-on-scroll {
+.js-enhanced .brands-grid .brand-card {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+}
+
+.js-enhanced .brands-grid .brand-card.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.js-enhanced.motion-ready .brands-grid .brand-card.reveal-on-scroll {
   transform: translate3d(0, 18px, 0);
   transition:
     opacity var(--duration-slow) var(--ease-standard),
@@ -1477,8 +1492,12 @@ fieldset.form-field {
     border-color var(--duration-fast) var(--ease-standard);
 }
 
-.js-enhanced.motion-ready .brand-card.reveal-on-scroll.is-visible:hover,
-.js-enhanced.motion-ready .brand-card.reveal-on-scroll.is-visible:focus-within {
+.js-enhanced.motion-ready .brands-grid .brand-card.reveal-on-scroll.is-visible {
+  transform: translate3d(0, 0, 0);
+}
+
+.js-enhanced.motion-ready .brands-grid .brand-card.reveal-on-scroll.is-visible:hover,
+.js-enhanced.motion-ready .brands-grid .brand-card.reveal-on-scroll.is-visible:focus-within {
   transform: translateY(-3px);
   border-color: rgba(23, 63, 46, 0.25);
   box-shadow: var(--shadow-md);

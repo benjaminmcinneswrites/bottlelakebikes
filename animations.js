@@ -6,7 +6,29 @@
   var root = document.documentElement;
   root.classList.add("js-enhanced");
 
-  var nodes = document.querySelectorAll(".hero, .page-hero, main .section, .brand-card, .site-footer");
+  if ("scrollRestoration" in window.history) {
+    window.history.scrollRestoration = "manual";
+  }
+
+  window.addEventListener("beforeunload", function () {
+    window.scrollTo(0, 0);
+  });
+
+  window.addEventListener("pageshow", function () {
+    window.scrollTo(0, 0);
+
+    window.requestAnimationFrame(function () {
+      window.scrollTo(0, 0);
+    });
+  });
+
+  window.addEventListener("load", function () {
+    window.setTimeout(function () {
+      window.scrollTo(0, 0);
+    }, 0);
+  });
+
+  var nodes = document.querySelectorAll(".hero, .page-hero, main .section:not(.brands-section), .brand-card");
   if (!nodes.length) {
     return;
   }
