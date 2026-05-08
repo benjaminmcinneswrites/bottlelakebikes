@@ -6,12 +6,7 @@
   var root = document.documentElement;
   root.classList.add("js-enhanced");
 
-  var prefersReducedMotion = false;
-  if (window.matchMedia) {
-    prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  }
-
-  var nodes = document.querySelectorAll(".hero, .page-hero, main .section, .site-footer");
+  var nodes = document.querySelectorAll(".hero, .page-hero, main .section, .brand-card, .site-footer");
   if (!nodes.length) {
     return;
   }
@@ -31,16 +26,12 @@
   revealElements.forEach(function (element, index) {
     element.classList.add("reveal-on-scroll");
 
-    var delay = Math.min((index % 4) * 45, 135);
+    var isBrandCard = element.classList.contains("brand-card");
+    var delayStep = isBrandCard ? 35 : 45;
+    var delayLimit = isBrandCard ? 175 : 135;
+    var delay = Math.min((index % 6) * delayStep, delayLimit);
     element.style.setProperty("--reveal-delay", delay + "ms");
   });
-
-  if (prefersReducedMotion) {
-    revealElements.forEach(function (element) {
-      element.classList.add("is-visible");
-    });
-    return;
-  }
 
   window.requestAnimationFrame(function () {
     root.classList.add("motion-ready");
