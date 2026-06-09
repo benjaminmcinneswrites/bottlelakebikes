@@ -1,0 +1,28 @@
+# AI discovery for Bottle Lake Bikes
+
+# /llms.txt is the primary AI-readable site guide. This file is a simple compatibility pointer only; ai.txt is not treated here as a mature standard.
+
+Site: Bottle Lake Bikes
+Canonical home: https://bottlelakebikes.co.nz/
+Business summary: Local bike servicing, repairs, and sales in Parklands, Christchurch.
+
+Primary AI-readable guides:
+- https://bottlelakebikes.co.nz/llms.txt
+- https://bottlelakebikes.co.nz/llms-full.txt
+
+Search discovery:
+- https://bottlelakebikes.co.nz/sitemap.xml
+- https://bottlelakebikes.co.nz/robots.txt
+
+Key public pages:
+- https://bottlelakebikes.co.nz/services.html
+- https://bottlelakebikes.co.nz/buying-selling.html
+- https://bottlelakebikes.co.nz/our-brands.html
+- https://bottlelakebikes.co.nz/about.html
+- https://bottlelakebikes.co.nz/booking.html
+- https://bottlelakebikes.co.nz/contact.html
+
+Contact:
+- Phone: 021 0290 1656
+- Email: contact@bottlelakebikes.co.nz
+- Address: 43 Broadhaven Ave, Parklands, Christchurch

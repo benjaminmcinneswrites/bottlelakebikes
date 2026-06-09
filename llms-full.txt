@@ -1,0 +1,132 @@
+# Bottle Lake Bikes - Full AI Site Summary
+
+## Business Summary
+
+Bottle Lake Bikes is a local bike servicing, repair, and sales business in Parklands, Christchurch, located near Bottle Lake Forest. The site says Bottle Lake Bikes works on mountain, road, gravel, commuter, and e-bikes, sells fully serviced second-hand bikes, and helps customers sell bikes directly or on commission.
+
+Patrick is described as the person behind Bottle Lake Bikes. The About page says he has worked in the cycling industry as a service technician, a design engineer, and in product sourcing. The page also says he is happy to help with other gear and has experience working on scooters, prams, and wheelchairs.
+
+Canonical site: https://bottlelakebikes.co.nz/
+
+## Public Pages
+
+- [Home](https://bottlelakebikes.co.nz/): Overview of servicing, repairs, bike sales, after-hours service, and customer reviews.
+- [Repairs and Servicing](https://bottlelakebikes.co.nz/services.html): Service packages, add-ons, individual service pricing, and booking calls to action.
+- [Buying and Selling](https://bottlelakebikes.co.nz/buying-selling.html): Refurbished bike sales, direct bike buying, and commission sales.
+- [Our Brands](https://bottlelakebikes.co.nz/our-brands.html): Bike brands, parts, components, tyres, accessories, clothing, and gear available through Bottle Lake Bikes.
+- [About](https://bottlelakebikes.co.nz/about.html): Background on Patrick, the business, and service approach.
+- [Booking](https://bottlelakebikes.co.nz/booking.html): Online booking page for bike service.
+- [Contact](https://bottlelakebikes.co.nz/contact.html): Contact details and contact form.
+
+## Repairs and Servicing
+
+The services page says Bottle Lake Bikes provides bike servicing with clear pricing and services all bikes including mountain, road, gravel, commuter, and e-bikes. It also says customers who are unsure what they need can book in and have the bike assessed on drop-off.
+
+### Service Packages
+
+- Drivetrain deep clean add-on: $39. Includes full removal of chain, cassette, and chainrings; deep clean of drivetrain components; reassembly and lubrication; replacement drivetrain parts fitted if required, with parts extra.
+- General Service: $79. Includes brake tuning and adjustment, gear tuning, safety and bolt check, clean bike and wheels, adjust hubs and headset, inflate tyres, and chain lubrication.
+- Full Service: $159. Includes everything in General Service plus cable lubrication or replacement with new parts extra, wheel truing and spoke tensioning, hub service, headset service, and bottom bracket service.
+
+### Service Add-ons
+
+- Fork lowers: $65 per unit, plus seals if required.
+- Rear shock air can service: $65.
+- Full suspension pivot clean and grease: $90, with bearing replacement available if required.
+- Dropper post service: $60, plus parts if required.
+- Brake bleed: $25 for Shimano/Tektro, $40 for SRAM, per brake.
+- Tyre sealant refreshed: $8 per wheel.
+
+### Individual Service Items
+
+- Puncture repair or tyre replacement: $15.
+- Brake tune: $15 per brake.
+- Gear tune: from $25.
+- Comprehensive safety check: $40.
+- Bottom bracket service or replacement: $35.
+- Fork lowers / rear shock air can service: $65, plus seals if required.
+- Dropper post service: $60, plus parts if required.
+- Wheel build: $90.
+- Bar tape replacement: $25.
+
+The services page says Bottle Lake Bikes can often get customers in for a service in 1-2 days and asks customers to use the booking form or call 021 0290 1656.
+
+## Buying and Selling Bikes
+
+The buying and selling page says Bottle Lake Bikes sells good quality, fully serviced bikes so customers can buy second-hand with confidence.
+
+Selling options described on the site:
+
+- Sell a bike directly to Bottle Lake Bikes for a simpler process and an upfront price.
+- Sell a bike through Bottle Lake Bikes on commission. The site says Bottle Lake Bikes will service, clean, and polish the bike prior to sale.
+
+Commission rates for bikes sold on a customer's behalf:
+
+- Sales up to $600: 35% commission.
+- Sales between $600 and $1500: 30% commission.
+- Sales between $1500 and $3000: 25% commission.
+- Sales over $3000: 20% commission.
+- Minimum commission: $100.
+
+The page says Bottle Lake Bikes will provide an estimated sale price before listing the bike.
+
+<!-- TODO: The repository does not include a current inventory page or individual refurbished bike listings. -->
+
+## Brands and Parts
+
+The brands page says Bottle Lake Bikes supplies bike brands for repairs, servicing, replacement parts, tyres, tubes, drivetrain components, brakes, wheels, workshop tools, riding gear, and accessories in Parklands, Christchurch.
+
+Brand categories listed on the page:
+
+- Bikes.
+- Service parts.
+- Tyres and wheels.
+- Components.
+- Accessories.
+- Riding gear.
+
+Brands listed on the page include Haro, Orange Bikes, Bombtrack Bikes, microSHIFT, Frictive, Hayes, Absolute Black, Wheels MFG, Hope, SKF, Vittoria, WTB, CST, Hutchinson, Pirelli, American Classic, E*thirteen, SUNringle, Lightweight, Tune, PNW, Reverse, HT Pedals, Brooks, Lizard Skins, Maxima, Zefal, Exposure, AXA, Beto, Pedro's, IceToolz, Geosmina, Back Country, Endura, 100%, Proviz, BoBike, Polisport, and Ryno Power.
+
+The page asks customers looking for a specific bike brand, replacement part, tyre, tube, brake pad, drivetrain part, wheel component, or riding accessory in Christchurch to get in touch so Bottle Lake Bikes can check availability.
+
+## Booking
+
+Booking page: https://bottlelakebikes.co.nz/booking.html
+
+The booking page says customers can call 021 0290 1656 for fastest service or book online. The online booking button links to Setmore:
+
+https://bottlelakebikes.setmore.com/book?redirect=https%3A%2F%2Fwww.bottlelakebikes.co.nz%2Fthanks-for-booking.html
+
+The booking page says service turnaround is often same or next day.
+
+## Contact Details
+
+- Phone: 021 0290 1656.
+- Email: contact@bottlelakebikes.co.nz.
+- Address: 43 Broadhaven Ave, Parklands, Christchurch.
+- Open hours: Monday-Friday, 7:30am-4:00pm.
+- Footer note: after-hours appointments available on request.
+- Contact page: https://bottlelakebikes.co.nz/contact.html
+
+## Reviews
+
+The home page includes featured 5-star customer reviews. Names shown in the current review section include Liam O'Rourke, Struan George, Kyran Frunt, Jamie Todd, Jeff Zeldin, Hannah, Zavian Fletcher, and Sophie Marsh.
+
+## Public Site Structure Notes
+
+This repository is a static HTML site. Public pages are root-level HTML files. Public static discovery files should also live at the repository root so they are served as:
+
+- https://bottlelakebikes.co.nz/llms.txt
+- https://bottlelakebikes.co.nz/llms-full.txt
+- https://bottlelakebikes.co.nz/ai.txt
+- https://bottlelakebikes.co.nz/robots.txt
+- https://bottlelakebikes.co.nz/sitemap.xml
+
+The admin pages are excluded from this guide and from the sitemap.
+
+## Missing or Unclear Public Information
+
+<!-- TODO: Add FAQ content if the business publishes frequently asked questions. -->
+<!-- TODO: Add privacy, terms, returns, warranty, or service policy pages if they are published. -->
+<!-- TODO: Confirm whether the practical service area extends beyond Parklands and Christchurch before describing a wider service region. -->
+<!-- TODO: Add current refurbished bike inventory only if the site publishes live inventory pages. -->

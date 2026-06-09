@@ -1,0 +1,44 @@
+# Bottle Lake Bikes
+
+> Bottle Lake Bikes is a local bike mechanic in Parklands, Christchurch, offering bike servicing, repairs, refurbished bike sales, and bike buying/selling support.
+
+## About
+
+Bottle Lake Bikes is run by Patrick and is located near Bottle Lake Forest in Parklands, Christchurch. The site describes bike servicing and repairs for mountain, road, gravel, commuter, and e-bikes, plus second-hand bike sales and bike buying/selling support.
+
+## Key Pages
+
+- [Home](https://bottlelakebikes.co.nz/): Overview of Bottle Lake Bikes, its repair and servicing work, second-hand bike services, after-hours service note, and customer reviews.
+- [Repairs and Servicing](https://bottlelakebikes.co.nz/services.html): Bike service packages, add-ons, individual service items, and pricing.
+- [Buying and Selling](https://bottlelakebikes.co.nz/buying-selling.html): Information about buying refurbished bikes, selling a bike directly to Bottle Lake Bikes, or selling a bike on commission.
+- [Bike Parts, Components and Accessory Brands](https://bottlelakebikes.co.nz/our-brands.html): Brands and product categories supplied for bikes, service parts, tyres, wheels, components, accessories, and riding gear.
+- [About](https://bottlelakebikes.co.nz/about.html): Background on Patrick and the business approach.
+- [Booking](https://bottlelakebikes.co.nz/booking.html): Online booking page for bike servicing, with a phone option for fastest service.
+- [Contact](https://bottlelakebikes.co.nz/contact.html): Phone, email, address, opening hours, and contact form.
+
+## Services
+
+- [Repairs and Servicing](https://bottlelakebikes.co.nz/services.html): General Service, Full Service, drivetrain deep clean add-on, suspension and brake add-ons, individual repairs, and service pricing.
+- [Booking](https://bottlelakebikes.co.nz/booking.html): Book a bike in for service online or call 021 0290 1656.
+- [Buying and Selling](https://bottlelakebikes.co.nz/buying-selling.html): Buy refurbished bikes, sell a bike to Bottle Lake Bikes, or sell a bike through Bottle Lake Bikes on commission.
+- [Our Brands](https://bottlelakebikes.co.nz/our-brands.html): Ask about replacement parts, tyres, tubes, brake pads, drivetrain parts, wheel components, riding accessories, and listed bike brands.
+
+## Portfolio / Case Studies
+
+<!-- TODO: No public portfolio, project, or case-study pages are present in the repository. -->
+No public portfolio or case-study pages are currently listed.
+
+## Resources / Blog / FAQs
+
+<!-- TODO: No public blog, article, resource, or FAQ pages are present in the repository. -->
+No public resources, blog posts, articles, or FAQs are currently listed.
+
+## Policies
+
+<!-- TODO: No public privacy, terms, returns, warranty, or service policy pages are present in the repository. -->
+No public policy pages are currently listed.
+
+## Contact
+
+- [Contact Bottle Lake Bikes](https://bottlelakebikes.co.nz/contact.html): Phone 021 0290 1656, email contact@bottlelakebikes.co.nz, address 43 Broadhaven Ave, Parklands, Christchurch.
+- [Book Online](https://bottlelakebikes.co.nz/booking.html): Online service booking page.
