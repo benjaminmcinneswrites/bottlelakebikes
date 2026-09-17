@@ -1,0 +1,212 @@
+BOTTLE LAKE BIKES — CURRENT BRANDS CONTENT
+
+PAGE HEADING
+Bike brands we supply in Christchurch
+
+INTRODUCTION
+Bottle Lake Bikes supplies bike brands and products for repairs, servicing, replacement parts, tyres, tubes, drivetrain components, brakes, wheels, workshop tools, riding gear and accessories in Parklands, Christchurch.
+Not every supplier/product is listed, so customers can ask if they need something specific.
+
+CURRENT CATEGORIES
+- Bikes
+- Service parts
+- Tyres and wheels
+- Components
+- Accessories
+- Riding gear
+
+BRANDS + CURRENTLY LISTED PRODUCT TYPES
+
+Haro
+- Mountain bikes
+- Road bikes
+- E-bikes
+- Kids bikes
+
+Orange Bikes
+- Mountain bikes
+- E-bikes
+
+Bombtrack Bikes
+- Mountain bikes
+- Gravel bikes
+- Road bikes
+- Adventure bikes
+
+microSHIFT
+- Bike drivetrains
+- Cassettes
+- Shifters
+- Derailleurs
+
+Frictive
+- Disc brake pads for bike repairs
+- Rimpact tyre inserts and suspension dampers
+
+Hayes
+- Bike brakes
+
+Absolute Black
+- Chainrings
+- Lubricants
+- Brake pads
+- Bike grips
+
+Wheels MFG
+- Derailleur hangers
+- Bearings
+- Bike workshop tools
+- Chainrings
+
+Hope
+- Hubs
+- Wheels
+- Bike components
+
+SKF
+- Suspension fork seals
+
+Vittoria
+- Road and mountain bike tyres
+- Tyre inserts
+
+WTB
+- Bike grips
+- Bike tyres
+- Bike seats
+- Rims
+
+CST
+- Bike tyres and tubes
+
+Hutchinson
+- Mountain bike and road bike tyres
+
+Pirelli
+- Bike tyres
+
+American Classic
+- Bike tyres
+
+E*thirteen
+- Mountain bike tyres
+- Wheels
+- Bike components
+
+SUNringlé
+- Wheels
+- Hubs
+- Rims
+
+Lightweight
+- Wheels
+
+Tune
+- Wheels
+- Hubs
+- Tools
+- Accessories
+
+PNW
+- Dropper posts
+- Bike grips
+- Handlebars
+- Pedals
+
+Reverse
+- Bike seats
+- Handlebars
+- Pedals
+- Bike components
+
+HT Pedals
+- Bike pedals
+
+Brooks
+- Saddles
+- Bike grips
+- Bar tape
+- Baskets
+
+Lizard Skins
+- Bike grips
+- Road bike bar tape
+- Knee pads
+- Elbow pads
+
+Maxima
+- Suspension oil
+- Chain oil and bike lubricants
+- Grease
+- Brake fluid
+- Bike cleaning products
+
+Zefal
+- Bike pumps
+- Mudguards
+- Bike accessories
+- Chain lubrication
+- Bike cleaning products
+
+Exposure
+- Bike lights
+
+AXA
+- Bike locks and security
+
+Beto
+- Bike pumps
+
+Pedro's
+- Bike workshop tools
+- Bike care products
+
+IceToolz
+- Bike-specific workshop tools
+- General workshop tools
+
+Geosmina
+- Bike bags
+
+Back Country
+- Bike storage straps
+
+Endura
+- MTB clothing
+- Helmets and protection
+- Road cycling clothing
+
+100%
+- Bike helmets
+- Cycling gloves
+- Protection
+- Clothing
+- Eyewear
+
+Proviz
+- Reflective cycling jackets
+
+BoBike
+- Child bike seats
+
+Polisport
+- Child bike seats
+
+Ryno Power
+- Nutrition
+
+CURRENT CLOSING CTA
+Heading:
+Ask about bike parts, tyres, and component upgrades.
+
+Core message:
+If a customer needs a specific bike brand, replacement part, tyre, tube, brake pad, drivetrain part, wheel component or riding accessory in Christchurch, they can contact Bottle Lake Bikes to check availability.
+
+CURRENT ACTIONS
+- Ask About a Brand
+- View Repairs and Servicing
+
+IMPORTANT FOR REDESIGN
+The local mockup assets folder is expected to already contain brand-logo images.
+Inventory those assets and use the supplied logo images on the Brands page.
+Do NOT download replacement logos or reduce the brands page to plain text if matching brand assets already exist.

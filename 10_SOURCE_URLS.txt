@@ -1,0 +1,33 @@
+BOTTLE LAKE BIKES — SOURCE MAP
+
+PRIMARY CURRENT SITE
+https://bottlelakebikes.co.nz/
+
+CURRENT CONTENT ROUTES DISCOVERED
+Homepage:
+https://bottlelakebikes.co.nz/
+
+Repairs & Servicing:
+https://bottlelakebikes.co.nz/services.html
+(The search backend did not return the full body during this scrape.)
+
+Buying & Selling:
+https://bottlelakebikes.co.nz/buying-selling.html
+
+Our Brands:
+https://bottlelakebikes.co.nz/our-brands.html
+
+About:
+https://bottlelakebikes.co.nz/about.html
+
+Contact:
+https://bottlelakebikes.co.nz/contact.html
+(The search backend did not return the full body during this scrape; first-party contact details are present in the shared footer.)
+
+Bookings:
+https://bottlelakebikes.co.nz/booking.html
+(The search backend did not return the full body during this scrape.)
+
+EXTERNAL CONTEXT USED ONLY FOR LOCATION/BACKGROUND, NOT BUSINESS CLAIMS
+ChristchurchNZ describes Bottle Lake Forest Park as a major local cycling area with a broad network of forest tracks.
+This context supports leaning into the Bottle Lake / forest / local-rider identity, but do not copy unrelated tourism content into the business site.

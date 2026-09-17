@@ -1,1 +1,44 @@
-<!DOCTYPE html> <html lang="en-NZ"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <title>Thanks for Booking | Bottle Lake Bikes</title> <meta name="description" content="Thanks for booking your bike service with Bottle Lake Bikes."> <meta name="robots" content="noindex, nofollow"> <link rel="stylesheet" href="assets/site.min.css"> <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> <link rel="manifest" href="site.webmanifest"> <script>window.top!==window.self&&window.top.location.replace(window.location.href)</script> </head> <body> <div class="site-announcement" data-banner-state="loading" role="status" aria-live="polite"> <div class="container"> <p> <strong data-banner-title>Your new local workshop is here!</strong> <span data-banner-message>Bottle Lake Bikes opens Thursday, April 16th</span> </p> </div> </div> <header class="site-header"> <div class="container header-inner"> <a class="site-logo" href="index.html"><img class="site-logo-image" src="Logo v3.0.png" alt="Bottle Lake Bikes"></a> <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu"> <span class="nav-toggle-icon" aria-hidden="true"></span> <span class="visually-hidden">Menu</span> </button> <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation"> <ul class="nav-list"> <li><a href="services.html">Repairs and Servicing</a></li> <li><a href="buying-selling.html">Buying and Selling</a></li> <li><a href="our-brands.html">Our Brands</a></li> <li><a href="about.html">About</a></li> <li><a href="contact.html">Contact</a></li> <li><a href="booking.html" aria-current="page">Bookings</a></li> </ul> </nav> </div> </header> <main id="booking-confirmation" data-tracking-page="booking-confirmation"> <section class="page-hero"> <div class="container narrow"> <h1>Thanks for booking.</h1> <p class="lead"> Your booking has been received. You should get a confirmation from the booking system shortly. </p> </div> </section> </main> <footer class="site-footer"> <div class="container footer-grid"> <div> <h2 class="footer-title">Bottle Lake Bikes</h2> <p> Local bike servicing, repairs and sales in Parklands, Christchurch. </p> </div> <div> <h3 class="footer-heading">Contact</h3> <ul class="footer-list"> <li><a href="tel:02102901656">021 0290 1656</a></li> <li><a href="mailto:contact@bottlelakebikes.co.nz">contact@bottlelakebikes.co.nz</a></li> <li>43 Broadhaven Ave, Parklands, Christchurch</li> </ul> </div> <div> <h3 class="footer-heading">Hours</h3> <p>Monday - Friday<br>7:30am - 4:00pm<br>After hours appointments available on request</p> </div> </div> </footer> <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js" defer="defer"></script> <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js" defer="defer"></script> <script src="assets/site.min.js" defer="defer"></script> </body> </html>
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#0f2d20">
+  <title>Thanks for Booking | Bottle Lake Bikes</title>
+  <meta name="description" content="Thanks for booking your bike service with Bottle Lake Bikes.">
+  <link rel="icon" type="image/png" sizes="32x32" href="ASSETS/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="Bottle Lake Bikes home"><img src="ASSETS/bottle-lake-bikes-logo.webp" alt="Bottle Lake Bikes" width="6399" height="1074"></a>
+      <nav class="desktop-nav" aria-label="Primary navigation"><a href="./#services">Services</a><a href="./#buying-selling">Buying &amp; Selling</a><a href="brands">Brands</a><a href="about">About</a><a href="./#contact">Contact</a><a class="btn btn-primary" href="booking">Book a Service</a></nav>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation" data-nav-toggle><span></span></button>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" aria-hidden="true" data-mobile-nav><div class="mobile-nav-inner"><a href="./#services">Services</a><a href="./#buying-selling">Buying &amp; Selling</a><a href="brands">Brands</a><a href="about">About</a><a href="./#contact">Contact</a><a class="mobile-book" href="booking">Book a Service</a></div></nav>
+  <main class="page-main" id="main-content">
+    <section class="page-hero page-hero-animated" aria-labelledby="page-title">
+      <div class="page-hero-image"><img src="ASSETS/Homepage.webp" alt="Mountain bike trail through Bottle Lake Forest in Christchurch" width="1619" height="971"></div>
+      <div class="container">
+        <p class="kicker">Booking received</p>
+        <h1 id="page-title">Thanks for booking.</h1>
+      </div>
+    </section>
+    <section class="section cream">
+      <div class="container narrow reveal">
+        <p class="lead">Your booking has been received. You should get a confirmation from the booking system shortly.</p>
+        <div class="button-row" style="margin-top:2rem"><a class="btn btn-primary" href="./">Back to home</a><a class="link-arrow" href="tel:02102901656">Call 021 0290 1656</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner"><span class="footer-brand">Bottle Lake Bikes</span><nav class="footer-nav" aria-label="Footer navigation"><a href="./#services">Services</a><a href="brands">Brands</a><a href="about">About</a><a href="booking">Booking</a></nav><span>© <span data-year>2026</span> Bottle Lake Bikes</span></div>
+  </footer>
+</body>
+</html>

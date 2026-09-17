@@ -1,0 +1,49 @@
+BOTTLE LAKE BIKES — BRAND / DESIGN REFERENCE
+
+EXISTING BRAND
+The current Bottle Lake Bikes logo uses bold condensed/block typography in a very dark forest green on a light background.
+
+PRIMARY BRAND DIRECTION
+- deep Bottle-Lake-style forest green
+- light / warm off-white background
+- white
+- dark charcoal/ink where useful
+- optional restrained trail/sand neutral
+
+IMPORTANT
+Do not invent a new unrelated colour identity.
+Before coding, inspect the existing Bottle Lake Bikes logo, local CSS/source and supplied assets and derive the EXACT existing brand green from those files.
+Use that real colour value as the primary colour.
+
+LOGO
+The current public logo is a bold "BOTTLE LAKE BIKES" wordmark.
+Use supplied local logo assets rather than rebuilding the logo from scratch if the asset exists.
+
+DESIGN PERSONALITY FOR REDESIGN
+- local Christchurch bike workshop
+- confident but approachable
+- strong workshop/trail photography
+- modern without looking like a tech startup
+- slightly outdoors / forest connected
+- premium enough to build trust
+- practical enough to feel like a real repair shop
+- no generic cycling-race aesthetic
+- no fake pro-team graphics
+- no overuse of gears/cogs as decorative icons
+- no neon sports-store look
+
+FULL-SCREEN HERO
+Use an existing high-quality image from the local assets folder.
+Hero should immediately communicate bikes, local workshop/trail context and service.
+Do not search for or download new imagery for this redesign unless explicitly requested later.
+
+MOTION
+Use a bike/workshop/trail-specific motion language:
+- smooth full-screen hero image settle/scale
+- horizontal track-like reveals
+- subtle line motion suggesting trail paths / wheel movement without literal gimmicks
+- restrained stagger on service content
+- brand-logo/brands-page transitions that remain clean and product-focused
+
+Do not use cartoon spinning wheels/gears.
+Do not disable motion because of prefers-reduced-motion for this mockup.

@@ -1,0 +1,45 @@
+BOTTLE LAKE BIKES — REVIEW REFERENCE
+
+CURRENT HOMEPAGE TRUST SIGNAL
+Google rating displayed: 5.0
+Heading: Trusted by local riders
+
+REVIEWERS DISPLAYED
+1. Liam O'Rourke
+2. Struan George
+3. Kyran Frunt
+4. Jamie Todd
+5. Jeff Zeldin
+6. Hannah
+7. Zavian Fletcher
+8. Sophie Marsh
+
+REVIEW THEMES
+Liam O'Rourke:
+Patrick was easy to deal with and valued as convenient local bike expertise.
+
+Struan George:
+Bike returned looking/running very well; communication and overall service praised.
+
+Kyran Frunt:
+Good communication, fast/high-quality service and reasonable pricing; intends to return.
+
+Jamie Todd:
+Meticulous work, clear explanation of repairs, good communication and quick turnaround; intends to return.
+
+Jeff Zeldin:
+Positive mountain-bike repair experience; quality, speed, affordability and local convenience praised.
+
+Hannah:
+Very happy with a full service and says the bike runs better than before.
+
+Zavian Fletcher:
+Attention to detail and fast/efficient service praised; intends to return.
+
+Sophie Marsh:
+Service described as good value, flexible and friendly; bike performance improved significantly and customer intends to return.
+
+REDESIGN USE
+Feature only a handful of reviews at once, but make the 5.0 trust signal prominent.
+Do not fabricate review counts or new testimonials.
+If the exact existing review text already exists locally in the current project, it may be reused there.

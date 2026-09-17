@@ -1,0 +1,48 @@
+BOTTLE LAKE BIKES — REQUESTED REDESIGN ARCHITECTURE
+
+PRIMARY HOME PAGE
+Most of the site should now live on one strong scrolling homepage.
+
+Recommended homepage content:
+1. Full-screen image hero
+2. Trust strip / 5.0 review signal
+3. Repairs & servicing
+4. Second-hand bikes / buying & selling
+5. Flexible after-hours service
+6. Brand teaser / parts availability link to Brands page
+7. About Patrick / Bottle Lake Bikes teaser with Read More link
+8. Selected Google reviews
+9. Contact + hours + location
+10. Strong booking CTA / footer
+
+SECONDARY PAGES ONLY
+- Brands
+- About
+- Booking
+
+NAVIGATION
+Recommended:
+- Services (homepage anchor)
+- Buying & Selling (homepage anchor)
+- Brands (separate route)
+- About (separate route)
+- Contact (homepage anchor)
+- Book a Service (separate booking route / CTA)
+
+ABOUT LINKING
+The homepage must contain a clean, worthwhile About section introducing Patrick and Bottle Lake Bikes.
+That section must include a clear Read More action to the full About page.
+About must also remain directly accessible from navigation.
+
+BRANDS PAGE
+Use the supplied brand-logo imagery already present in the local assets folder.
+Use the brand/product mapping from 03_BRANDS_CONTENT.txt.
+Make the large brand list easy to scan/filter visually without turning it into an ecommerce catalogue.
+
+BOOKING PAGE
+Use any existing factual booking content / fields already available locally.
+Do not invent policies or availability.
+
+ONE-PAGE GOAL
+Do not create separate pages for Repairs, Buying/Selling, Contact or Reviews unless technically unavoidable.
+Those should be homepage sections.

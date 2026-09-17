@@ -1,10 +1,4 @@
-User-agent: OAI-SearchBot
-Disallow: /admin-portal.html
-Disallow: /admin-console.html
-Allow: /
-
 User-agent: *
-Disallow: /admin-portal.html
-Disallow: /admin-console.html
+Allow: /
 
 Sitemap: https://bottlelakebikes.co.nz/sitemap.xml

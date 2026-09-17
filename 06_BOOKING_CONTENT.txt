@@ -1,0 +1,24 @@
+BOTTLE LAKE BIKES — BOOKING CONTENT / HANDOFF
+
+CURRENT SITE
+The current site has a dedicated Bookings route and repeatedly uses "Book a Service" as a primary CTA.
+
+KNOWN BOOKING CONTEXT
+- Bottle Lake Bikes services/repairs all types of bikes.
+- Flexible drop-off / pick-up outside standard hours is available by arrangement.
+- Current public hours are Monday-Friday, 7:30am-4:00pm.
+- After-hours appointments are available on request.
+- Contact phone: 021 0290 1656
+- Email: contact@bottlelakebikes.co.nz
+- Address: 43 Broadhaven Ave, Parklands, Christchurch
+
+SCRAPE LIMITATION
+The public search backend did not return the full body of the current booking.html page.
+
+DO NOT INVENT MISSING BOOKING DETAILS.
+Codex should inspect the current/local Bottle Lake Bikes implementation before replacing any existing booking fields, instructions, availability rules or workflow.
+
+REDESIGN REQUIREMENT
+Keep Booking as a dedicated secondary page.
+For the mockup, preserve the existing booking intent and any locally available factual form content.
+Unless the existing mockup already has a deliberately working local-safe booking integration, do not introduce a new external backend or transmit test form data.
