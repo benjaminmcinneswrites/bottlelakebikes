@@ -579,3 +579,73 @@ body.nav-open .mobile-nav { opacity: 1; transform: translateY(0); }
   .hero-copy .button-row { margin-top: auto; }
   .home-hero .btn-ghost { min-height: 44px; }
 }
+
+/* Editorial advice pages and homepage FAQs. Add future article cards to bike-tips.html. */
+.advice-heading { padding-block: clamp(3rem, 6vw, 5.5rem) 3rem; }
+.advice-heading h1 { max-width: 20ch; font-size: clamp(2.8rem, 5.8vw, 5.5rem); line-height: 1.05; }
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: .65rem; margin-bottom: 2.5rem; color: var(--muted); font-size: .85rem; }
+.breadcrumbs a:hover { color: var(--forest); text-decoration: underline; }
+.advice-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; padding-bottom: var(--section); }
+.advice-card { border-top: 1px solid var(--line); }
+.advice-card > a { display: block; height: 100%; }
+.advice-card img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.advice-card-copy { padding: 2rem 0; }
+.advice-card h2 { max-width: 23ch; margin-bottom: 1rem; font-size: clamp(1.8rem, 3vw, 2.8rem); line-height: 1.12; }
+.advice-card p:not(.kicker) { max-width: 48ch; color: var(--muted); }
+.advice-card a:hover h2 { color: var(--forest-bright); }
+.article-layout { display: grid; grid-template-columns: 240px minmax(0, 760px); gap: clamp(2rem, 5vw, 5rem); padding-bottom: var(--section); align-items: start; }
+.article-sidebar { position: sticky; top: 110px; padding-top: .5rem; }
+.article-sidebar nav { display: grid; margin-bottom: 2rem; }
+.article-sidebar nav a { padding: .6rem 0; border-bottom: 1px solid var(--line); font-size: .9rem; }
+.article-sidebar nav a:hover { color: var(--forest-bright); text-decoration: underline; }
+.article-sidebar > a { font-size: .85rem; }
+.article-copy { min-width: 0; font-size: 1.08rem; line-height: 1.85; }
+.article-copy > p { margin-bottom: 1.6rem; }
+.article-copy h2 { margin: 3rem 0 1.4rem; font-size: clamp(1.9rem, 3vw, 2.7rem); line-height: 1.12; }
+.article-copy h2:first-child { margin-top: 0; }
+.article-copy > p:first-child { font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.65; }
+.article-copy p a { text-decoration: underline; text-underline-offset: .2em; text-decoration-color: var(--sand); text-decoration-thickness: 2px; }
+.article-copy p a:hover { text-decoration-color: var(--forest); }
+.article-figure { margin: 2.5rem 0; }
+.article-figure img { width: auto; max-height: 660px; height: auto; margin-inline: auto; }
+.article-figure figcaption { margin-top: .8rem; color: var(--muted); font-size: .85rem; line-height: 1.5; }
+.article-image-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.article-image-pair .article-figure { margin-bottom: 0; }
+.article-next { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+.article-next .link-arrow { line-height: 1.5; }
+.advice-booking { padding-block: 3rem; }
+.advice-booking .container { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.advice-booking h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+.service-advice { margin: -1rem 0 2rem; }
+.faq-layout { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.faq-layout h2 { max-width: 12ch; font-size: clamp(2.5rem, 4.7vw, 4.5rem); line-height: 1.07; margin-bottom: 1.5rem; }
+.faq-list { border-bottom: 1px solid var(--line); }
+.faq-item { border-top: 1px solid var(--line); }
+.faq-item summary { position: relative; cursor: pointer; padding: 1.3rem 2.5rem 1.3rem 0; font-size: 1.08rem; font-weight: 750; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; position: absolute; right: .5rem; top: 1.1rem; font-size: 1.5rem; font-weight: 400; }
+.faq-item[open] summary::after { content: "−"; }
+.faq-answer { padding: 0 1rem .7rem 0; }
+.faq-answer p { margin-bottom: 1rem; }
+@media (min-width: 901px) and (max-width: 1200px) {
+  .header-inner { gap: 1rem; }
+  .desktop-nav { gap: .65rem; }
+  .desktop-nav > a { font-size: .72rem; }
+  .brand img { width: 190px; }
+}
+@media (max-width: 900px) {
+  .article-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .article-sidebar { position: static; }
+  .article-sidebar nav { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin-bottom: .8rem; }
+  .article-sidebar .kicker { width: 100%; margin-bottom: .5rem; }
+  .advice-booking .container { align-items: start; flex-direction: column; }
+  .faq-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .advice-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .advice-heading { padding-top: 2.5rem; }
+  .article-copy { font-size: 1rem; line-height: 1.8; }
+  .article-image-pair { gap: .6rem; }
+  .article-figure { margin-block: 2rem; }
+  .article-next .link-arrow::after { display: none; }
+}

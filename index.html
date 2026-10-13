@@ -9,6 +9,7 @@
   <title>Bottle Lake Bikes | Bike Repairs &amp; Servicing in Parklands</title>
   <meta name="description" content="Local bike repairs, servicing and second-hand bike sales in Parklands, Christchurch, right by Bottle Lake Forest.">
   <link rel="icon" type="image/png" sizes="32x32" href="ASSETS/favicon-32x32.png">
+  <link rel="canonical" href="https://bottlelakebikes.co.nz/">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -24,7 +25,7 @@
         <a href="#services">Services</a>
         <a href="#buying-selling">Buying &amp; Selling</a>
         <a href="brands">Brands</a>
-        <a href="about">About</a>
+        <a href="bike-tips">Bike Tips &amp; Advice</a><a href="about">About</a>
         <a href="#contact">Contact</a>
         <a class="btn btn-primary" href="booking">Book a Service</a>
       </nav>
@@ -37,7 +38,7 @@
       <a href="#services">Services</a>
       <a href="#buying-selling">Buying &amp; Selling</a>
       <a href="brands">Brands</a>
-      <a href="about">About</a>
+      <a href="bike-tips">Bike Tips &amp; Advice</a><a href="about">About</a>
       <a href="#contact">Contact</a>
       <a class="mobile-book" href="booking">Book a Service</a>
     </div>
@@ -81,6 +82,7 @@
           <p>We offer a range of service levels to suit your needs, or can create a custom service or repair plan just for you.</p>
         </div>
 
+        <p class="service-advice"><a class="link-arrow" href="servicing-explained">Not sure which service? Read Servicing Explained</a></p>
         <div class="service-packages">
           <article class="service-package reveal">
             <p class="package-label">Service</p>
@@ -115,7 +117,7 @@
             </ul>
           </article>
 
-          <article class="service-package service-package-overhaul is-featured reveal">
+          <article id="mtb-full-overhaul" class="service-package service-package-overhaul is-featured reveal">
             <div class="overhaul-intro">
               <p class="package-label">Service</p>
               <h3>MTB Full Overhaul</h3>
@@ -146,7 +148,7 @@
           </article>
         </div>
 
-        <div class="workshop-grid reveal">
+        <div class="workshop-grid reveal" id="workshop-pricing">
           <div class="workshop-copy">
             <p class="kicker">Workshop jobs &amp; specialist work</p>
             <h3>Extra add-ons</h3>
@@ -185,6 +187,14 @@
         </div>
       </div>
     </section>
+
+    <section class="section white faq-section" id="faqs" aria-labelledby="faq-title"><div class="container faq-layout"><div><p class="kicker">Before you book</p><h2 id="faq-title">Frequently asked questions</h2><a class="link-arrow" href="booking">Book a Service</a></div><div class="faq-list"><details class="faq-item"><summary>Do you service and repair E-Bikes?</summary><div class="faq-answer"><p>Yes, I do! Most e-bike servicing is the same as regular bike servicing anyway — the gears, brakes, wheels and other parts all work in the same way as a regular bike and require the same servicing. For the most part, e-bike motors and batteries are sealed units and are best left alone, but we can diagnose and repair any issues that might pop up.</p>
+</div></details><details class="faq-item"><summary>Do you supply parts and accessories?</summary><div class="faq-answer"><p>Yes. I keep common parts such as tyres, brake pads, chains and cassettes in stock meaning that we can repair 90% of bikes on the same day. If your bike requires something I don’t have on hand I will let you know and order it in.</p>
+<p>I am also more than happy to sell these parts separately — if you need something and want to install it yourself I can sell you what you need.</p>
+</div></details><details class="faq-item"><summary>Wait times</summary><div class="faq-answer"><p>Here at Bottle Lake Bikes I want to see you back out and riding as quickly as possible. I can nearly always make time to fit you in at short notice. If you need your bike repaired urgently, Bottle Lake Bikes is your best bet, we can probably help today.</p>
+</div></details><details class="faq-item"><summary>Can I drop my bike off after hours?</summary><div class="faq-answer"><p>Yes. As far as possible, I try to be flexible and work with customers&#x27; schedules. Feel free to get in touch to organise an after-hours drop-off time, or otherwise feel free to just drop by and try your luck.</p>
+</div></details><details class="faq-item"><summary>Do you have a loan / courtesy bike?</summary><div class="faq-answer"><p>Yes. I normally have a couple of bikes available that I am more than happy to loan you to ride back home or to work while I work on yours.</p>
+</div></details></div></div></section>
 
     <section id="buying-selling" aria-labelledby="buying-title">
       <div class="buying-grid">
@@ -359,7 +369,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span class="footer-brand">Bottle Lake Bikes</span>
-      <nav class="footer-nav" aria-label="Footer navigation"><a href="#services">Services</a><a href="brands">Brands</a><a href="about">About</a><a href="booking">Booking</a></nav>
+      <nav class="footer-nav" aria-label="Footer navigation"><a href="#services">Services</a><a href="brands">Brands</a><a href="bike-tips">Bike Tips &amp; Advice</a><a href="about">About</a><a href="booking">Booking</a></nav>
       <span>© <span data-year>2026</span> Bottle Lake Bikes</span>
     </div>
   </footer>
