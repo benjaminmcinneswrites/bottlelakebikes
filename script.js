@@ -52,7 +52,7 @@ updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
 
 const revealItems = document.querySelectorAll(".reveal");
-if ("IntersectionObserver" in window) {
+try {
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
@@ -65,9 +65,77 @@ if ("IntersectionObserver" in window) {
     item.style.transitionDelay = `${Math.min((index % 4) * 70, 210)}ms`;
     revealObserver.observe(item);
   });
-} else {
+  document.documentElement.classList.add("reveals-ready");
+  // Establish the hidden styles before the first observer callback, including on fast loads.
+  document.documentElement.getBoundingClientRect();
+} catch {
+  document.documentElement.classList.remove("reveals-ready");
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
+
+document.querySelectorAll(".faq-item").forEach((item) => {
+  const summary = item.querySelector("summary");
+  const answer = item.querySelector(".faq-answer");
+  if (!summary || !answer || !answer.animate) return;
+
+  // Keep the existing answer padding inside a container that can reach zero height.
+  const panel = document.createElement("div");
+  answer.before(panel);
+  panel.append(answer);
+  let animation = null;
+  let expanded = item.open;
+
+  const animateAnswer = (open) => {
+    const startHeight = item.open ? panel.getBoundingClientRect().height : 0;
+    const startOpacity = item.open ? getComputedStyle(panel).opacity : 0;
+    if (animation) {
+      animation.oncancel = null;
+      animation.cancel();
+    }
+
+    expanded = open;
+    item.open = true;
+    item.classList.toggle("is-closing", !open);
+    summary.setAttribute("aria-expanded", String(open));
+    panel.style.overflow = "hidden";
+
+    const currentAnimation = panel.animate({
+      height: [`${startHeight}px`, `${open ? answer.getBoundingClientRect().height : 0}px`],
+      opacity: [startOpacity, open ? 1 : 0]
+    }, { duration: 300, easing: "cubic-bezier(0.22, 1, 0.36, 1)", fill: "both" });
+    animation = currentAnimation;
+
+    const finish = () => {
+      if (animation !== currentAnimation) return;
+      item.open = open;
+      item.classList.remove("is-closing");
+      panel.style.overflow = "";
+      animation = null;
+      currentAnimation.oncancel = null;
+      currentAnimation.cancel();
+    };
+    currentAnimation.onfinish = finish;
+    currentAnimation.oncancel = finish;
+  };
+
+  summary.addEventListener("click", (event) => {
+    event.preventDefault();
+    animateAnswer(!expanded);
+  });
+
+  item.addEventListener("toggle", () => {
+    if (animation) return;
+    expanded = item.open;
+    summary.setAttribute("aria-expanded", String(expanded));
+  });
+
+  // Remeasure wrapping or dynamically resized content without leaving a fixed height.
+  if ("ResizeObserver" in window) {
+    new ResizeObserver(() => {
+      if (animation) animateAnswer(expanded);
+    }).observe(answer);
+  }
+});
 
 const reviewPanels = Array.from(document.querySelectorAll("[data-review-panel]"));
 const reviewStatus = document.querySelector("[data-review-status]");
