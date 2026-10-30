@@ -151,6 +151,7 @@ body.nav-open .mobile-nav { opacity: 1; transform: translateY(0); }
 /* Homepage hero */
 .home-hero { position: relative; display: grid; min-height: 100svh; align-items: end; overflow: hidden; padding: clamp(9rem, 18vh, 13rem) 0 clamp(3rem, 7vh, 5rem); color: var(--white); background: #17281f; }
 .home-hero-media { position: absolute; inset: 0; }
+.home-hero-media picture { display: block; width: 100%; height: 100%; }
 .home-hero-media::after { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5, 20, 13, 0.9) 0%, rgba(5, 20, 13, 0.57) 46%, rgba(5, 20, 13, 0.12) 82%), linear-gradient(0deg, rgba(5, 20, 13, 0.62), transparent 45%); content: ""; }
 .home-hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 56% center; opacity: 0; transform: scale(1.06); filter: saturate(.8); }
 .home-hero-media img.is-loaded { animation: hero-settle 2.6s var(--ease) both; }
@@ -247,7 +248,7 @@ body.nav-open .mobile-nav { opacity: 1; transform: translateY(0); }
 .logo-group { display: flex; flex: none; }
 .logo-tile { display: grid; width: clamp(165px, 15vw, 210px); min-height: 112px; place-items: center; padding: 1.2rem; border-right: 1px solid var(--line-light); background: var(--cream); }
 .logo-tile.teaser-dark { background: #0a2418; }
-.logo-group img { width: 100%; max-width: 135px; max-height: 48px; object-fit: contain; opacity: .86; transition: opacity 220ms ease, transform 260ms var(--ease); }
+.logo-group img { width: 100%; height: auto; max-width: 135px; max-height: 48px; object-fit: contain; opacity: .86; transition: opacity 220ms ease, transform 260ms var(--ease); }
 @keyframes logo-marquee { to { transform: translateX(-50%); } }
 .brand-teaser-footer { display: flex; justify-content: flex-end; margin-bottom: 1rem; }
 .brand-teaser-link { display: inline-flex; align-items: center; min-height: 44px; color: rgba(255,255,255,.82); font-size: .8rem; font-weight: 800; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .35rem; }
@@ -367,7 +368,7 @@ body.nav-open .mobile-nav { opacity: 1; transform: translateY(0); }
 .brand-entry { display: grid; grid-template-rows: 82px auto 1fr; min-width: 0; padding: 1.5rem; border-top: 1px solid var(--line); border-right: 1px solid var(--line); }
 .brand-entry:nth-child(3n) { border-right: 0; }
 .brand-logo-tile { display: flex; align-items: center; justify-content: flex-start; min-width: 0; padding: 1rem 0; }
-.brand-logo-tile img { width: auto; max-width: min(100%, 175px); max-height: 55px; object-fit: contain; transition: transform 280ms var(--ease), opacity 220ms ease; }
+.brand-logo-tile img { width: auto; height: auto; max-width: min(100%, 175px); max-height: 55px; object-fit: contain; transition: transform 280ms var(--ease), opacity 220ms ease; }
 .brand-entry:hover img { transform: translateX(5px); }
 .brand-logo-tile.is-dark { justify-content: center; margin: 0 0 .75rem; padding: 1rem; background: var(--forest); }
 .brand-entry h4 { margin: .7rem 0 .45rem; font-size: 1rem; }
