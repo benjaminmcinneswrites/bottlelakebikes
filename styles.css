@@ -601,6 +601,8 @@ body.nav-open .mobile-nav { opacity: 1; transform: translateY(0); }
 .article-sidebar > a { font-size: .85rem; }
 .article-copy { min-width: 0; font-size: 1.08rem; line-height: 1.85; }
 .article-copy > p { margin-bottom: 1.6rem; }
+.article-troubleshooting { margin-bottom: 1.6rem; padding-left: 1.4rem; }
+.article-troubleshooting li + li { margin-top: 1rem; }
 .article-copy h2 { margin: 3rem 0 1.4rem; font-size: clamp(1.9rem, 3vw, 2.7rem); line-height: 1.12; }
 .article-copy h2:first-child { margin-top: 0; }
 .article-copy > p:first-child { font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.65; }
